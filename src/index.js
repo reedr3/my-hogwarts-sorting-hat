@@ -1,12 +1,11 @@
 "use strict";
-var APP_ID = "amzn1.ask.skill.61aab75b-5c9f-402a-92d4-1f999d5a1d2d";
+var APP_ID = undefined;  // TODO replace with your app ID (OPTIONAL).
 
 var ANSWER_COUNT = 4; // The number of possible answers per trivia question.
 var GAME_LENGTH = 5;  // The number of questions per trivia game.
 var GAME_STATES = {
-    SORT: "_SORTMODE", // Sorting questions.
-    SONG: "_SONGMODE", // Entry point, start the sorting song.
-    EXTRA: "_EXTRAMODE", // A few other extra goodies users can ask.
+    TRIVIA: "_TRIVIAMODE", // Asking trivia questions.
+    START: "_STARTMODE", // Entry point, start the game.
     HELP: "_HELPMODE" // The user is asking for help.
 };
 var questions = require("./questions");
@@ -19,7 +18,7 @@ var languageString = {
     "en-US": {
         "translation": {
             "QUESTIONS" : questions["QUESTIONS_EN_US"],
-            "GAME_NAME" : "Unofficial Sorting Hat",
+            "GAME_NAME" : "American Reindeer Trivia", // Be sure to change this for your skill.
             "HELP_MESSAGE": "I will ask you %s multiple choice questions. Respond with the number of the answer. " +
             "For example, say one, two, three, or four. To start a new game at any time, say, start game. ",
             "REPEAT_QUESTION_MESSAGE": "To repeat the last question, say, repeat. ",
@@ -46,24 +45,24 @@ var languageString = {
 };
 
 var Alexa = require("alexa-sdk");
-var APP_ID = "amzn1.ask.skill.61aab75b-5c9f-402a-92d4-1f999d5a1d2d";
+var APP_ID = undefined;  // TODO replace with your app ID (OPTIONAL).
 
 exports.handler = function(event, context, callback) {
     var alexa = Alexa.handler(event, context);
     alexa.appId = APP_ID;
     // To enable string internationalization (i18n) features, set a resources object.
     alexa.resources = languageString;
-    alexa.registerHandlers(newSessionHandlers, songStateHandlers, sortStateHandlers, extraStateHandlers, helpStateHandlers);
+    alexa.registerHandlers(newSessionHandlers, startStateHandlers, triviaStateHandlers, helpStateHandlers);
     alexa.execute();
 };
 
 var newSessionHandlers = {
     "LaunchRequest": function () {
-        this.handler.state = GAME_STATES.SONG;
+        this.handler.state = GAME_STATES.START;
         this.emitWithState("StartGame", true);
     },
     "AMAZON.StartOverIntent": function() {
-        this.handler.state = GAME_STATES.SONG;
+        this.handler.state = GAME_STATES.START;
         this.emitWithState("StartGame", true);
     },
     "AMAZON.HelpIntent": function() {
@@ -76,7 +75,7 @@ var newSessionHandlers = {
     }
 };
 
-var songStateHandlers = Alexa.CreateStateHandler(GAME_STATES.SONG, {
+var startStateHandlers = Alexa.CreateStateHandler(GAME_STATES.START, {
     "StartGame": function (newGame) {
         var speechOutput = newGame ? this.t("NEW_GAME_MESSAGE", this.t("GAME_NAME")) + this.t("WELCOME_MESSAGE", GAME_LENGTH.toString()) : "";
         // Select GAME_LENGTH questions for the game
@@ -107,12 +106,12 @@ var songStateHandlers = Alexa.CreateStateHandler(GAME_STATES.SONG, {
         });
 
         // Set the current state to trivia mode. The skill will now use handlers defined in triviaStateHandlers
-        this.handler.state = GAME_STATES.SORT;
+        this.handler.state = GAME_STATES.TRIVIA;
         this.emit(":askWithCard", speechOutput, repromptText, this.t("GAME_NAME"), repromptText);
     }
 });
 
-var sortStateHandlers = Alexa.CreateStateHandler(GAME_STATES.SORT, {
+var triviaStateHandlers = Alexa.CreateStateHandler(GAME_STATES.TRIVIA, {
     "AnswerIntent": function () {
         handleUserGuess.call(this, false);
     },
@@ -120,7 +119,7 @@ var sortStateHandlers = Alexa.CreateStateHandler(GAME_STATES.SORT, {
         handleUserGuess.call(this, true);
     },
     "AMAZON.StartOverIntent": function () {
-        this.handler.state = GAME_STATES.SONG;
+        this.handler.state = GAME_STATES.START;
         this.emitWithState("StartGame", false);
     },
     "AMAZON.RepeatIntent": function () {
@@ -155,7 +154,7 @@ var helpStateHandlers = Alexa.CreateStateHandler(GAME_STATES.HELP, {
         this.emit(":ask", speechOutput, repromptText);
     },
     "AMAZON.StartOverIntent": function () {
-        this.handler.state = GAME_STATES.SONG;
+        this.handler.state = GAME_STATES.START;
         this.emitWithState("StartGame", false);
     },
     "AMAZON.RepeatIntent": function () {
@@ -168,10 +167,10 @@ var helpStateHandlers = Alexa.CreateStateHandler(GAME_STATES.HELP, {
     },
     "AMAZON.YesIntent": function() {
         if (this.attributes["speechOutput"] && this.attributes["repromptText"]) {
-            this.handler.state = GAME_STATES.SORT;
+            this.handler.state = GAME_STATES.TRIVIA;
             this.emitWithState("AMAZON.RepeatIntent");
         } else {
-            this.handler.state = GAME_STATES.SONG;
+            this.handler.state = GAME_STATES.START;
             this.emitWithState("StartGame", false);
         }
     },
