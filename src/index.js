@@ -18,28 +18,29 @@ var languageString = {
     "en-US": {
         "translation": {
             "QUESTIONS" : questions["QUESTIONS_EN_US"],
-            "GAME_NAME" : "American Reindeer Trivia", // Be sure to change this for your skill.
-            "HELP_MESSAGE": "I will ask you %s multiple choice questions. Respond with the number of the answer. " +
-            "For example, say one, two, three, or four. To start a new game at any time, say, start game. ",
+            "GAME_NAME" : "Unofficial Sorting Hat",
+            "HELP_MESSAGE": "I will ask you %s questions. Respond with the number of the answer. " +
+            "For example, say one, two, three, or four. To start the sorting at any time, say, start game. ",
             "REPEAT_QUESTION_MESSAGE": "To repeat the last question, say, repeat. ",
-            "ASK_MESSAGE_START": "Would you like to start playing?",
+            "ASK_MESSAGE_START": "Would you like to start the sorting?",
             "HELP_REPROMPT": "To give an answer to a question, respond with the number of the answer. ",
-            "STOP_MESSAGE": "Would you like to keep playing?",
-            "CANCEL_MESSAGE": "Ok, let\'s play again soon.",
-            "NO_MESSAGE": "Ok, we\'ll play another time. Goodbye!",
+            "STOP_MESSAGE": "Would you like to keep going?",
+            "CANCEL_MESSAGE": "Ok, let\'s do this again soon.",
+            "NO_MESSAGE": "Ok, we\'ll do this another time. Goodbye!",
             "TRIVIA_UNHANDLED": "Try saying a number between 1 and %s",
-            "HELP_UNHANDLED": "Say yes to continue, or no to end the game.",
-            "START_UNHANDLED": "Say start to start a new game.",
-            "NEW_GAME_MESSAGE": "Welcome to %s. ",
-            "WELCOME_MESSAGE": "I will ask you %s questions, try to get as many right as you can. " +
+            "HELP_UNHANDLED": "Say yes to continue, or no to end.",
+            "START_UNHANDLED": "Say start to start a new sorting.",
+            "NEW_GAME_MESSAGE": "Welcome to Hogwarts! Before you can begin your studies you must be sorted into your house. While at Hogwarts, your house will be like your family. Let\'s begin. ",
+            "WELCOME_MESSAGE": "I will ask you %s questions, try to answer as honestly as you can. " +
             "Just say the number of the answer. Let\'s begin. ",
             "ANSWER_CORRECT_MESSAGE": "correct. ",
             "ANSWER_WRONG_MESSAGE": "wrong. ",
             "CORRECT_ANSWER_MESSAGE": "The correct answer is %s: %s. ",
             "ANSWER_IS_MESSAGE": "That answer is ",
             "TELL_QUESTION_MESSAGE": "Question %s. %s ",
-            "GAME_OVER_MESSAGE": "You got %s out of %s questions correct. Thank you for playing!",
-            "SCORE_IS_MESSAGE": "Your score is %s. "
+            "GAME_OVER_MESSAGE": "Better be Gryffindor! Enjoy the magic! ",
+            "SCORE_IS_MESSAGE": "Your score is %s. ",
+            "SORTING_SONG": "Sorting song goes here. "
         }
     }
 };
@@ -77,7 +78,7 @@ var newSessionHandlers = {
 
 var startStateHandlers = Alexa.CreateStateHandler(GAME_STATES.START, {
     "StartGame": function (newGame) {
-        var speechOutput = newGame ? this.t("NEW_GAME_MESSAGE", this.t("GAME_NAME")) + this.t("WELCOME_MESSAGE", GAME_LENGTH.toString()) : "";
+        var speechOutput = newGame ? this.t("NEW_GAME_MESSAGE") : "";
         // Select GAME_LENGTH questions for the game
         var translatedQuestions = this.t("QUESTIONS");
         var gameQuestions = populateGameQuestions(translatedQuestions);
