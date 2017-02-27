@@ -1,19 +1,12 @@
 {
-  "name": "skill-sample-js-trivia",
+  "name": "DecisionTree",
   "version": "1.0.0",
-  "description": "A simple trivia skill i18n version.",
+  "description": "Alexa Decision Tree template",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "alexa",
-    "skill",
-    "trivia"
-  ],
-  "author": "Amazon.com",
-  "license": "Apache-2.0",
   "dependencies": {
-    "alexa-sdk": "^1.0.7"
-  }
+    "alexa-sdk": "^1.0.0"
+  },
+  "devDependencies": {},
+  "author": "Amazon.com",
+  "license": "SEE LICENSE IN license.md"
 }

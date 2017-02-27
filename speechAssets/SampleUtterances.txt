@@ -1,0 +1,41 @@
+SongIntent begin song
+SongIntent begin sorting song
+SongIntent play song
+SongIntent play sorting song
+
+SortIntent begin sorting
+SortIntent begin sorting ceremony
+SortIntent sort again
+SortIntent sort another student
+SortIntent sort me
+
+ContinueIntent continue
+
+PoemIntent hear more
+PoemIntent hear more about house
+PoemIntent hear poem
+PoemIntent hear house poem
+PoemIntent hear poem about house
+PoemIntent play poem
+PoemIntent play house poem
+PoemIntent play poem about house
+
+AskQuestionIntent I have a question
+AskQuestionIntent I have a question for the sorting hat
+AskQuestionIntent I have a question for you
+AskQuestionIntent I have questions
+AskQuestionIntent I have questions for the sorting hat
+AskQuestionIntent I have questions for you
+AskQuestionIntent I want to ask a question
+AskQuestionIntent I want to ask you a question
+AskQuestionIntent I want to ask the sorting hat a question
+
+AMAZON.StopIntent stop
+AMAZON.StopIntent off
+AMAZON.StopIntent mischief managed
+
+AMAZON.StartOverIntent start over
+AMAZON.StartOverIntent restart
+AMAZON.StartOverIntent start again
+AMAZON.StartOverIntent play again
+AMAZON.StartOverIntent I solemnly swear I am up to no good
