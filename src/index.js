@@ -16,30 +16,26 @@ var states = {
 };
 
 
-// starting node
-var nodes = [{ "node": 1, "message": "Do you want to hear the sorting song or skip to the sorting ceremony? Say begin song or say begin sorting", "song": 2, "sort": 3, "yes": 2, "no": 3 },
-// song and sorting nodes
-             { "node": 2, "message": "Sorting song goes here", "sort": 3, "yes": 3, "no": 1 },
-             { "node": 3, "message": "Put me on so I can sort you! Sort sort sort. So much sorting. Sort all the students! Take me off so I can announce your house!", "G": 4, "R": 5, "H": 6, "S": 7, "yes": 4, "no": 6 },
+var nodes = [
 // house announcement nodes
-             { "node": 4, "message": "Gryffindor! Would you like to hear more about your house or continue? Say hear more or say continue.", "poem": 8, "continue": 12, "yes": 8, "no": 12 },
-             { "node": 5, "message": "Ravenclaw! Would you like to hear more about your house or continue? Say hear more or say continue.", "poem": 9, "continue": 12, "yes": 9, "no": 12 },
-             { "node": 6, "message": "Hufflepuff! Would you like to hear more about your house or continue? Say hear more or say continue.", "poem": 10, "continue": 12, "yes": 10, "no": 12 },
-             { "node": 7, "message": "Slytherin! Would you like to hear more about your house or continue? Say hear more or say continue.", "poem": 11, "continue": 12, "yes": 11, "no": 12 },
+             { "node": 1, "message": "Gryffindor! Would you like to hear more about your house or continue? Say hear more or say continue.", "poem": 5, "continue": 9, "yes": 5, "no": 9 },
+             { "node": 2, "message": "Ravenclaw! Would you like to hear more about your house or continue? Say hear more or say continue.", "poem": 6, "continue": 9, "yes": 6, "no": 9 },
+             { "node": 3, "message": "Hufflepuff! Would you like to hear more about your house or continue? Say hear more or say continue.", "poem": 7, "continue": 9, "yes": 7, "no": 9 },
+             { "node": 4, "message": "Slytherin! Would you like to hear more about your house or continue? Say hear more or say continue.", "poem": 8, "continue": 9, "yes": 8, "no": 9 },
 // house poem nodes
-             { "node": 8, "message": "Brave and stuff", "continue": 12, "yes": 12, "no": 3 },
-             { "node": 9, "message": "Really smart", "continue": 12, "yes": 12, "no": 3 },
-             { "node": 10, "message": "Honey badger don't give a shhh", "continue": 12, "yes": 12, "no": 3 },
-             { "node": 11, "message": "Cunning or whatever", "continue": 12, "yes": 12, "no": 3 },
+             { "node": 5, "message": "Brave and stuff", "yes": 9, "no": 9 },
+             { "node": 6, "message": "Really smart", "yes": 9, "no": 9 },
+             { "node": 7, "message": "Honey badger don't give a shhh", "yes": 9, "no": 9 },
+             { "node": 8, "message": "Cunning or whatever", "yes": 9, "no": 9 },
 // song again, sort again, or questions node, or finish
-             { "node": 12, "message": "Would you like to hear the sorting song again? Or would you like to sort another student? Or would the student just sorted like to ask me some questions? Say begin song, or say begin sorting, or say I have a question (and put the hat back on). Or say mischief managed to finish.", "song": 2, "sort": 3, "question": 13, "yes": 2, "no": 13 },
+             { "node": 9, "message": "Would you like to hear the sorting song again? Or would you like to sort another student? Or would the student just sorted like to ask me some questions? Say begin song, or say begin sorting, or say I have a question (and put the hat back on). Or say mischief managed to finish.", "yes": 10, "no": 10 },
 // which question list (bee in your bonnet)
-             { "node": 13, "message": "Bee in your bonnet? Which of the following questions would you like to ask? One, did you put me in the right house? Two, why do you take longer to sort some people? Three, third question. Four, fourth question. Say one, two, three, or four to ask your question.", "one": 14, "two": 15, "three": 16, "four": 17, "yes": 14, "no": 15 },
+             { "node": 10, "message": "Bee in your bonnet? Which of the following questions would you like to ask? One, did you put me in the right house? Two, why do you take longer to sort some people? Three, third question. Four, fourth question. Say one, two, three, or four to ask your question.", "one": 11, "two": 12, "three": 13, "four": 14, "yes": 11, "no": 12 },
 // question answers
-             { "node": 14, "message": "Witty answer about being right or something. Do you have another question?", "yes": 13, "no": 12 },
-             { "node": 15, "message": "For some it is a clear choice, others are harder to decide. Do you have another question?", "yes": 13, "no": 12 },
-             { "node": 16, "message": "Witty answer number three. Do you have another question?", "yes": 13, "no": 12 },
-             { "node": 17, "message": "Witty answer number four. Do you have another question?", "yes": 13, "no": 12 }
+             { "node": 11, "message": "Witty answer about being right or something. Do you have another question?", "yes": 10, "no": 9 },
+             { "node": 12, "message": "For some it is a clear choice, others are harder to decide. Do you have another question?", "yes": 10, "no": 9 },
+             { "node": 13, "message": "Witty answer number three. Do you have another question?", "yes": 10, "no": 9 },
+             { "node": 14, "message": "Witty answer number four. Do you have another question?", "yes": 10, "no": 9 }
 ];
 
 // this is used for keep track of visted nodes when we test for loops in the tree
@@ -48,7 +44,7 @@ var visited;
 // These are messages that Alexa says to the user during conversation
 
 // This is the intial welcome message
-var welcomeMessage = "Welcome to Hogwarts! Before you begin your studies you must be sorted into your houses. While here, your house will be like your family. Would you like to begin?";
+var welcomeMessage = "Welcome to hogworts! Before you begin your studies you must be sorted into your houses. While here, your house will be like your family. Lets begin! Do you want to hear the sorting song or skip to the sorting ceremony? Say begin song or say begin sorting";
 
 // This is the message that is repeated if the response to the initial welcome message is not heard
 var repeatWelcomeMessage = "Say yes to begin or say no to exit.";
@@ -84,7 +80,7 @@ var utteranceTellMeMore = "describe house";
 var utterancePlayAgain = "play again";
 
 // the first node that we will use
-var START_NODE = 1;
+var START_NODE = 3;
 
 // --------------- Handlers -----------------------
 
@@ -114,35 +110,28 @@ var newSessionHandler = {
 
 // Called at the start of the game, picks and asks first question for the user
 var startGameHandlers = Alexa.CreateStateHandler(states.STARTMODE, {
-    'AMAZON.YesIntent': function () {
 
-        // ---------------------------------------------------------------
-        // // check to see if there are any loops in the node tree - this section can be removed in production code
-        // visited = [nodes.length];
-        // var loopFound = helper.debugFunction_walkNode(START_NODE);
-        // if( loopFound === true)
-        // {
-        //     // comment out this line if you know that there are no loops in your decision tree
-        //      this.emit(':tell', loopsDetectedMessage);
-        // }
-        // ---------------------------------------------------------------
+    'SongIntent': function () {
+        // plays sorting song
+        // TODO add function that chooses one of the three songs
+        this.emit(':ask', "i am a sorting song of much sorting. would you like to begin the sorting now? say begin sorting");
+    },
+    'SortIntent': function () {
+        // this all sets up the node traversal. the first node is where all the sorting happens.
+        // TODO later need an actual trivia game embedded in here. that will determine which node we go to next, based on which house wins
+        // for now, just randomly choose between the four houses
+        houseChoiceNode = helper.getRandomIntInclusive(1, 4);
 
         // set state to asking questions
         this.handler.state = states.ASKMODE;
-
         // ask first question, the response will be handled in the askQuestionHandler
-        var message = helper.getSpeechForNode(START_NODE);
-
+        var message = helper.getSpeechForNode(houseChoiceNode);
         // record the node we are on
-        this.attributes.currentNode = START_NODE;
-
+        this.attributes.currentNode = houseChoiceNode;
         // ask the first question
-        this.emit(':ask', message, message);
+        this.emit(':ask', "Put me on so I can sort you! Sort sort sort. So much sorting. Sort all the students! Take me off so I can announce your house! " + message, message);
     },
-    'AMAZON.NoIntent': function () {
-        // Handle No intent.
-        this.emit(':tell', goodbyeMessage);
-    },
+
     'AMAZON.StopIntent': function () {
         this.emit(':tell', goodbyeMessage);
     },
@@ -150,13 +139,13 @@ var startGameHandlers = Alexa.CreateStateHandler(states.STARTMODE, {
         this.emit(':tell', goodbyeMessage);
     },
     'AMAZON.StartOverIntent': function () {
-         this.emit(':ask', promptToStartMessage, promptToStartMessage);
+         this.emit(':ask', "start start over message", promptToStartMessage);
     },
     'AMAZON.HelpIntent': function () {
-        this.emit(':ask', helpMessage, helpMessage);
+        this.emit(':ask', "start help message", helpMessage);
     },
     'Unhandled': function () {
-        this.emit(':ask', promptToStartMessage, promptToStartMessage);
+        this.emit(':ask', "start unhandle message", promptToStartMessage);
     }
 });
 
@@ -166,6 +155,16 @@ var startGameHandlers = Alexa.CreateStateHandler(states.STARTMODE, {
 // make a choice, inform the user and then ask if they want to play again
 var askQuestionHandlers = Alexa.CreateStateHandler(states.ASKMODE, {
 
+    'PoemIntent': function () {
+        // Handle Poem intent.
+        helper.playPoem(this,'poem');
+    },
+    'ContinueIntent': function () {
+        // Handle Continue intent.
+        // set to nav mode
+        this.handler.state = states.DESCRIPTIONMODE;
+        this.emit(':ask', "nav options", repeatWelcomeMessage);
+    },
     'AMAZON.YesIntent': function () {
         // Handle Yes intent.
         helper.yesOrNo(this,'yes');
@@ -186,7 +185,7 @@ var askQuestionHandlers = Alexa.CreateStateHandler(states.ASKMODE, {
     'AMAZON.StartOverIntent': function () {
         // reset the game state to start mode
         this.handler.state = states.STARTMODE;
-        this.emit(':ask', welcomeMessage, repeatWelcomeMessage);
+        this.emit(':ask', "question start over", repeatWelcomeMessage);
     },
     'Unhandled': function () {
         this.emit(':ask', "question unhandle", promptToSayYesNo);
@@ -195,6 +194,38 @@ var askQuestionHandlers = Alexa.CreateStateHandler(states.ASKMODE, {
 
 // user has heard the final choice and has been asked if they want to hear the description or to play again
 var descriptionHandlers = Alexa.CreateStateHandler(states.DESCRIPTIONMODE, {
+
+  'SongIntent': function () {
+      // plays sorting song
+      // TODO add function that chooses one of the three songs
+      this.emit(':ask', "i am a sorting song of much sorting. would you like to begin the sorting now? say begin sorting");
+  },
+  'SortIntent': function () {
+      // this all sets up the node traversal. the first node is where all the sorting happens.
+      // TODO later need an actual trivia game embedded in here. that will determine which node we go to next, based on which house wins
+      // for now, just randomly choose between the four houses
+      houseChoiceNode = helper.getRandomIntInclusive(4, 7);
+
+      // set state to asking questions
+      this.handler.state = states.ASKMODE;
+      // ask first question, the response will be handled in the askQuestionHandler
+      var message = helper.getSpeechForNode(houseChoiceNode);
+      // record the node we are on
+      this.attributes.currentNode = houseChoiceNode;
+      // ask the first question
+      this.emit(':ask', "Put me on so I can sort you! Sort sort sort. So much sorting. Sort all the students! Take me off so I can announce your house! " + message, message);
+  },
+  'AskQuestionIntent': function () {
+
+      // set state to asking questions
+      //this.handler.state = states.QUESTIONMODE;
+      // ask first question, the response will be handled in the askQuestionHandler
+      //var message = helper.getSpeechForNode(houseChoiceNode);
+      // record the node we are on
+      //this.attributes.currentNode = houseChoiceNode;
+      // ask the first question
+      this.emit(':ask', "which question do you wanna ask?", message);
+  },
 
  'AMAZON.YesIntent': function () {
         // Handle Yes intent.
@@ -234,6 +265,26 @@ var descriptionHandlers = Alexa.CreateStateHandler(states.DESCRIPTIONMODE, {
 // --------------- Helper Functions  -----------------------
 
 var helper = {
+
+    // play the appropriate poem for the house that was announced
+    playPoem: function (context, response) {
+      var poemNodeId = helper.getPoemNode(context.attributes.currentNode, response);
+
+      // // error in node data
+      // if (nextNodeId == -1)
+      // {
+      //     context.handler.state = states.STARTMODE;
+      //
+      //     // the current node was not found in the nodes array
+      //     // this is due to the current node in the nodes array having a yes / no node id for a node that does not exist
+      //     context.emit(':tell', nodeNotFoundMessage, nodeNotFoundMessage);
+      // }
+
+      // get the speech for the child node
+      var message = helper.getSpeechForNode(poemNodeId);
+
+      context.emit(':ask', message, message);
+    },
 
     // gives the user more information on their final choice
     giveDescription: function (context) {
@@ -327,6 +378,26 @@ var helper = {
         }
         // error condition, didnt find a matching node id. Cause will be a yes / no entry in the array but with no corrosponding array entry
         return -1;
+    },
+
+    // gets the poem node to traverse to based on the response
+    getPoemNode: function (nodeId, response) {
+        for (var i = 0; i < nodes.length; i++) {
+            if (nodes[i].node == nodeId) {
+                if (response == "poem") {
+                    return nodes[i].poem;
+                }
+                return nodes[i].continue;
+            }
+        }
+        // error condition, didnt find a matching node id. Cause will be a yes / no entry in the array but with no corrosponding array entry
+        return -1;
+    },
+
+    getRandomIntInclusive: function (min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min;
     },
 
     // Recursively walks the node tree looking for nodes already visited

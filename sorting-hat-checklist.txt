@@ -1,0 +1,15 @@
+make nodes navigable by intended words, not just yes or no
+
+- add new handlers and states
+- remove old handlers and states (ask mode, description mode, etc.)
+
+
+maybe remove loop debugging since i'm ok with/need to have loops
+
+create function that chooses between sorting songs and returns one
+call this function from appropriate node without disrupting node traversal
+
+make trivia game handler(s) that can do the actual sorting.
+call this from appropriate node without disrupting
+
+make uk english resources so that can speak with british accent
