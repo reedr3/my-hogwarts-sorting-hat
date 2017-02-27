@@ -1,0 +1,28 @@
+* make game be able to be a different length everytime you play (cause sorting hat is fast with some, slow with others)
+
+*** have a question asking them if they had to wish to not be in one house, which would it be (eg. "not slytherin")
+
+*** have questions designed so that answers can indicate just one or multipe houses (so have some questions where a = 3 pts to gryffindor count,
+b = 3 pts to ravenclaw count, etc. and other questions where a = 1 pt to g, r, and h, and b = 3 pts to slytherin. get creative)
+
+* have it read house short poems when you get sorted (use only book one poems? or 4 and 5 too?)
+
+* have an option to have it sing a sorting song or start the sorting (have it shuffle between the three sorting songs)
+
+* give it sorting hat phrases to say between questions, etc.
+
+have a comment like, "ah a history of X house in your family, i see. interesting.."
+
+* come up with a more clever name for app
+
+* and a more clever invocation (would love to use i solemnly swear i am up to no good and mischeif managed, but alas..)
+
+***** have questions so users can answer with words, not numbers..
+
+*** figure out ways to handle/avoid ties
+
+have user be able to ask why some people take longer and hat answers some minds are clearer choices than others
+
+* may need to give it a list of acceptable answer words. also maybe a list of the house names.. proper names that weird may be beyond it..
+
+omg! need to have an extra where they ask to be resorted or if the hat was right and it asks bee in your bonnet?

@@ -1,0 +1,63 @@
+{
+	"intents": [{
+      "intent": "AMAZON.YesIntent",
+      "slots": []
+    }, {
+      "intent": "AMAZON.NoIntent",
+      "slots": []
+    }, {
+		"intent": "AMAZON.HelpIntent",
+		"slots": []
+	}, {
+		"intent": "AMAZON.StopIntent",
+		"slots": []
+	}, {
+		"intent": "AMAZON.CancelIntent",
+		"slots": []
+	},{
+		"intent": "AMAZON.StartOverIntent",
+		"slots": []
+	}, {
+		"intent": "SongIntent",
+		 "slots": [
+        {
+          "name": "Song",
+          "type": "songType"
+        }]
+	}, {
+		"intent": "SortIntent",
+		 "slots": [
+        {
+          "name": "Sort",
+          "type": "sortType"
+        }]
+	}, {
+		"intent": "ContinueIntent",
+		 "slots": [
+        {
+          "name": "Continue",
+          "type": "continueType"
+        }]
+	}, {
+		"intent": "PoemIntent",
+		 "slots": [
+        {
+          "name": "Poem",
+          "type": "poemType"
+        }]
+	}, {
+		"intent": "AskQuestionIntent",
+		 "slots": [
+        {
+          "name": "AskQuestion",
+          "type": "askQuestionType"
+        }]
+	}, {
+		"intent": "ChooseQuestionIntent",
+		 "slots": [
+        {
+          "name": "ChooseQuestion",
+          "type": "AMAZON.NUMBER"
+        }]
+	}]
+}
