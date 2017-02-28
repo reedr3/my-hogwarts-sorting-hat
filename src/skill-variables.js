@@ -1,4 +1,5 @@
 module.exports = {
+
   "nodes": [
   // house announcement nodes
                { "node": 1, "message": "Gryffindor! Would you like to hear more about your house or continue? Say hear more or say continue.", "poem": 5, "continue": 9, "yes": 5, "no": 9 },
@@ -19,5 +20,18 @@ module.exports = {
                { "node": 12, "message": "For some it is a clear choice, others are harder to decide. Do you have another question?", "yes": 10, "no": 9 },
                { "node": 13, "message": "Witty answer number three. Do you have another question?", "yes": 10, "no": 9 },
                { "node": 14, "message": "Witty answer number four. Do you have another question?", "yes": 10, "no": 9 }
-  ]
+  ],
+
+  "states": {
+      STARTMODE: '_STARTMODE',                // Prompt the user to start or restart the game.
+      ASKMODE: '_ASKMODE',                    // Alexa is asking user the questions.
+      DESCRIPTIONMODE: '_DESCRIPTIONMODE'     // Alexa is describing the final choice and prompting to start again or quit
+  },
+
+  "messages": {
+
+  },
+
+  START_NODE: 3
+
 };

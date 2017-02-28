@@ -1,3 +1,7 @@
+var helper = require("./helper");
+var skillVariables = require("./skill-variables");
+var states = skillVariables["states"];
+
 module.exports = {
 
     'SongIntent': function () {
@@ -9,16 +13,12 @@ module.exports = {
         // this all sets up the node traversal. the first node is where all the sorting happens.
         // TODO later need an actual trivia game embedded in here. that will determine which node we go to next, based on which house wins
         // for now, just randomly choose between the four houses
-        //houseChoiceNode = helper.getRandomIntInclusive(1, 4);
-        houseChoiceNode = 2;
-        //houseChoiceNode = testHelper.testHelperFn(1);
+        houseChoiceNode = helper.getRandomIntInclusive(1, 4);
 
         // set state to asking questions
-        //this.handler.state = states.ASKMODE;
-        this.handler.state = "_ASKMODE";
+        this.handler.state = states.ASKMODE;
         // ask first question, the response will be handled in the askQuestionHandler
-        //var message = helper.getSpeechForNode(houseChoiceNode);
-        var message = "uh, ravenclaw or somethin";
+        var message = helper.getSpeechForNode(houseChoiceNode);
         // record the node we are on
         this.attributes.currentNode = houseChoiceNode;
         // ask the first question
