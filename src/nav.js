@@ -8,10 +8,11 @@ module.exports = {
 
     'SongIntent': function () {
       // plays one of the three possible sorting songs
-      var songIndex = helper.getRandomIntInclusive(1, 3);
+      var songIndex = helper.getRandomIntInclusive(0, 2);
       var songToPlay = sortingSongs[songIndex];
       this.emit(':ask', songToPlay + messages["afterSongMessage"], messages["afterSongMessage"]);
     },
+
     'SortIntent': function () {
       // this all sets up the node traversal. the first node is where all the sorting happens.
       // TODO later need an actual trivia game embedded in here. that will determine which node we go to next, based on which house wins
@@ -25,10 +26,13 @@ module.exports = {
       // ask the first question
       this.emit(':ask', messages["preSortingMessage"] + "Sort sort sort. So much sorting. Sort all the students! " + messages["postSortingMessage"] + house + messages["postAnnounceMessage"], messages["postAnnounceMessage"]);
     },
+
     'AskQuestionIntent': function () {
         this.handler.state = states.QUESTIONSMODE;
         this.emit(':ask', messages["chooseQuestionMessage"], messages["chooseQuestionMessage"]);
     },
+
+
 
     'AMAZON.StopIntent': function () {
         this.emit(':tell', messages["goodbyeMessage"]);

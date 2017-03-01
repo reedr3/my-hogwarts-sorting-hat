@@ -1,9 +1,9 @@
 module.exports = {
 
   // TODO
-  // remove extrneous intents from each state and check for stuff i no longer need or could consolidate
   // maybe pull sorting song selection into helper function that sets variable that lasts until program restarted
   // - this helper function gets called in start state song intent, and then later nav state start intent just plays the same song saved to a variable from before (only new song if program restarted)
+
   // create separate file to run actual sorting (you know... the point of all this, lol)
   // extra credit: have it know if it's sorted a student already since it was last restarted so it can ask if want to sort another student or something
   // extra extra credit: have it keep a tally of people's names (or numbers at least) and which houses they were sorted into
@@ -49,7 +49,8 @@ module.exports = {
       "anotherQuestionMessage": "Do you have another question? ",
       "goodbyeMessage": "Goodbye! ",
       "helpMessage": "I am the sorting hat! I can sing my song for you, or I can ask you questions and sort you into your house, or you can ask me questions after I sort you. ",
-      "startOverMessage": "Would you like to start the program over? Say start over. "
+      "startOverMessage": "Would you like to start the program over? Say start over. ",
+      "unhandleMessage": "Sorry, I didn't catch that. "
   },
 
   "sortingSongs": [
