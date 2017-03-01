@@ -56,8 +56,8 @@
 		"intent": "ChooseQuestionIntent",
 		 "slots": [
         {
-          "name": "ChooseQuestion",
-          "type": "chooseQuestionType"
+          "name": "Question",
+          "type": "AMAZON.NUMBER"
         }]
 	}]
 }

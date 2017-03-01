@@ -30,14 +30,7 @@ AskQuestionIntent I want to ask a question
 AskQuestionIntent I want to ask you a question
 AskQuestionIntent I want to ask the sorting hat a question
 
-ChooseQuestionIntent one
-ChooseQuestionIntent question one
-ChooseQuestionIntent two
-ChooseQuestionIntent question two
-ChooseQuestionIntent three
-ChooseQuestionIntent question three
-ChooseQuestionIntent four
-ChooseQuestionIntent question four
+ChooseQuestionIntent {Question}
 
 AMAZON.StopIntent stop
 AMAZON.StopIntent off

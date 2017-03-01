@@ -1,7 +1,9 @@
 var helper = require("./helper");
 var skillVariables = require("./skill-variables");
 var states = skillVariables["states"];
-var nodes = skillVariables["nodes"];
+var houses = skillVariables["houses"];
+var poems = skillVariables["poems"];
+var questions = skillVariables["questions"];
 var messages = skillVariables["messages"];
 var sortingSongs = skillVariables["sortingSongs"];
 
@@ -62,18 +64,20 @@ module.exports = {
       return -1;
   },
 
-  // gets the poem node to traverse to based on the response
-  getPoemNode: function (nodeId, response) {
-      for (var i = 0; i < nodes.length; i++) {
-          if (nodes[i].node == nodeId) {
-              if (response == "poem") {
-                  return nodes[i].poem;
-              }
-              return nodes[i].continue;
-          }
-      }
-      // error condition, didnt find a matching node id. Cause will be a yes / no entry in the array but with no corrosponding array entry
-      return -1;
+  // gets the speech output for the chosen house
+  getHouseSpeech: function (houseId) {
+      return houses[houseId];
+  },
+
+  // gets the poem output for the chosen house
+  getPoemSpeech: function (context) {
+      var houseId = context.attributes.houseChoice;
+      return poems[houseId];
+  },
+
+  // gets the poem output for the chosen house
+  getQuestionSpeech: function (questionId) {
+      return questions[questionId];
   },
 
   getRandomIntInclusive: function (min, max) {

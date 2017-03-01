@@ -16,15 +16,14 @@ module.exports = {
         // this all sets up the node traversal. the first node is where all the sorting happens.
         // TODO later need an actual trivia game embedded in here. that will determine which node we go to next, based on which house wins
         // for now, just randomly choose between the four houses
-        var houseChoiceNode = helper.getRandomIntInclusive(1, 4);
+        var houseChoice = helper.getRandomIntInclusive(0, 3);
+        this.attributes.houseChoice = houseChoice;
         // set state to asking questions
         this.handler.state = states.ANNOUNCEMODE;
         // ask first question, the response will be handled in the askQuestionHandler
-        var message = helper.getSpeechForNode(houseChoiceNode);
-        // record the node we are on
-        this.attributes.currentNode = houseChoiceNode;
+        var house = helper.getHouseSpeech(houseChoice);
         // ask the first question
-        this.emit(':ask', messages["preSortingMessage"] + "Sort sort sort. So much sorting. Sort all the students! " + messages["postSortingMessage"] + message + messages["postAnnounceMessage"], messages["postAnnounceMessage"]);
+        this.emit(':ask', messages["preSortingMessage"] + "Sort sort sort. So much sorting. Sort all the students! " + messages["postSortingMessage"] + house + messages["postAnnounceMessage"], messages["postAnnounceMessage"]);
     },
 
     'AMAZON.StopIntent': function () {
