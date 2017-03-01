@@ -5,30 +5,27 @@ var messages = skillVariables["messages"];
 var sortingSongs = skillVariables["sortingSongs"];
 
 module.exports = {
+
     'ChooseQuestionIntent': function () {
-        // TODO find answer to question that was chosen with this intent
         // emits answer to that question plus anotherQuestionMessage
         var question = parseInt(this.event.request.intent.slots.Question.value);
         var questionId = question - 1;
         var answer = helper.getQuestionSpeech(questionId);
-        // if  (answer == 1) {
-        //   this.emit(':ask', "yo", "sup");
-        // }
-        // else {
-        //   this.emit(':ask', "welp", "bugger");
-        // }
-        //var answer = "because i say so";
         this.emit(':ask', answer + messages["anotherQuestionMessage"], messages["anotherQuestionMessage"]);
     },
+
     'AMAZON.YesIntent': function () {
          // Handle Yes intent.
          this.emit(':ask', messages["chooseQuestionMessage"], messages["chooseQuestionMessage"]);
      },
+
      'AMAZON.NoIntent': function () {
          // Handle No intent.
          this.handler.state = states.NAVMODE;
          this.emit(':ask', messages["navMessage"], messages["navMessage"]);
      },
+
+
 
      'AMAZON.StopIntent': function () {
          this.emit(':tell', messages["goodbyeMessage"]);

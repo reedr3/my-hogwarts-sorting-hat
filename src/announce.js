@@ -5,17 +5,21 @@ var messages = skillVariables["messages"];
 var sortingSongs = skillVariables["sortingSongs"];
 
 module.exports = {
+
   'PoemIntent': function () {
       // Handle Poem intent.
       var poem = helper.getPoemSpeech(this);
-      this.emit(':ask', poem, poem);
+      this.emit(':ask', poem + messages["continueMessage"], messages["continueMessage"]);
   },
+
   'ContinueIntent': function () {
       // Handle Continue intent.
       // set to nav mode
       this.handler.state = states.NAVMODE;
       this.emit(':ask', messages["navMessage"], messages["navMessage"]);
   },
+
+
 
   'AMAZON.StopIntent': function () {
       this.emit(':tell', messages["goodbyeMessage"]);
