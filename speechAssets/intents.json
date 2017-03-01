@@ -32,6 +32,20 @@
           "type": "sortType"
         }]
 	}, {
+		"intent": "AnswerIntent",
+		 "slots": [
+        {
+          "name": "Answer",
+          "type": "AMAZON.NUMBER"
+        }]
+	}, {
+		"intent": "ReadyIntent",
+		 "slots": [
+        {
+          "name": "Ready",
+          "type": "readyType"
+        }]
+	}, {
 		"intent": "ContinueIntent",
 		 "slots": [
         {
