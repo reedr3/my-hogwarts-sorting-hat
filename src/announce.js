@@ -1,6 +1,8 @@
 var helper = require("./helper");
 var skillVariables = require("./skill-variables");
 var states = skillVariables["states"];
+var messages = skillVariables["messages"];
+var sortingSongs = skillVariables["sortingSongs"];
 
 module.exports = {
   'PoemIntent': function () {
@@ -10,32 +12,23 @@ module.exports = {
   'ContinueIntent': function () {
       // Handle Continue intent.
       // set to nav mode
-      this.handler.state = states.DESCRIPTIONMODE;
-      this.emit(':ask', "nav options", "nav options");
+      this.handler.state = states.NAVMODE;
+      this.emit(':ask', messages["navMessage"], messages["navMessage"]);
   },
-  'AMAZON.YesIntent': function () {
-      // Handle Yes intent.
-      helper.yesOrNo(this,'yes');
-  },
-  'AMAZON.NoIntent': function () {
-      // Handle No intent.
-       helper.yesOrNo(this, 'no');
-  },
-  'AMAZON.HelpIntent': function () {
-      this.emit(':ask', "question helper", promptToSayYesNo);
-  },
+
   'AMAZON.StopIntent': function () {
-      this.emit(':tell', goodbyeMessage);
+      this.emit(':tell', messages["goodbyeMessage"]);
   },
   'AMAZON.CancelIntent': function () {
-      this.emit(':tell', goodbyeMessage);
+      this.emit(':tell', messages["goodbyeMessage"]);
   },
   'AMAZON.StartOverIntent': function () {
-      // reset the game state to start mode
-      this.handler.state = states.STARTMODE;
-      this.emit(':ask', "question start over", repeatWelcomeMessage);
+       this.emit(':ask', messages["startOverMessage"], messages["startOverMessage"]);
+  },
+  'AMAZON.HelpIntent': function () {
+      this.emit(':ask', messages["helpMessage"], messages["helpMessage"]);
   },
   'Unhandled': function () {
-      this.emit(':ask', "announce unhandle", "announce unhandle");
+      this.emit(':ask', messages["postAnnounceMessage"], messages["postAnnounceMessage"]);
   }
 };

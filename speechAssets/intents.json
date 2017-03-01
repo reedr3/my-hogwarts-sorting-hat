@@ -57,7 +57,7 @@
 		 "slots": [
         {
           "name": "ChooseQuestion",
-          "type": "AMAZON.NUMBER"
+          "type": "chooseQuestionType"
         }]
 	}]
 }

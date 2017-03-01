@@ -1,6 +1,9 @@
+var helper = require("./helper");
 var skillVariables = require("./skill-variables");
-var nodes = skillVariables["nodes"];
 var states = skillVariables["states"];
+var nodes = skillVariables["nodes"];
+var messages = skillVariables["messages"];
+var sortingSongs = skillVariables["sortingSongs"];
 
 module.exports = {
 
@@ -9,8 +12,11 @@ module.exports = {
     var poemNodeId = this.getPoemNode(context.attributes.currentNode, response);
     // get the speech for the child node
     var message = this.getSpeechForNode(poemNodeId);
-    context.emit(':ask', message, message);
+    context.emit(':ask', message + messages["continueMessage"], message + messages["continueMessage"]);
   },
+
+  // TODO do i still need this yesNo function?????????? should i replace it with more specific logic?
+  // if i get rid of nodes, should probably ditch it
 
   // logic to provide the responses to the yes or no responses to the main questions
   yesOrNo: function (context, reply) {
@@ -39,8 +45,7 @@ module.exports = {
               return nodes[i].message;
           }
       }
-      return "could not find speech for node " + nodeId;
-      //return speechNotFoundMessage + nodeId;
+      return "speechNotFoundMessage" + nodeId;
   },
 
   // gets the next node to traverse to based on the yes no response
