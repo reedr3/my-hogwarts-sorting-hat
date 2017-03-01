@@ -47,7 +47,7 @@ module.exports = {
       "postSortingMessage": "Take me off so I can announce your house! ... Better be ",
       "postAnnounceMessage": "Would you like to hear more about your house or continue? Say hear more or say continue. ",
       "continueMessage": "Please say continue. ",
-      "navMessage": "Would you like to hear the sorting song again? Or would you like to sort another student? Or would the student just sorted like to ask me some questions? Say begin song, or say begin sorting, or say I have a question (and put the hat back on). Or say mischief managed to finish. ",
+      "navMessage": "Would you like to hear the sorting song again? Or would you like to sort another student? Or would the student just sorted like to ask me some questions? Say begin song, or say sort another student, or say I have a question (and put the hat back on). Or say mischief managed to finish. ",
       "chooseQuestionMessage": "Bee in your bonnet? Which of the following questions would you like to ask? One, did you put me in the right house? Two, why do you take longer to sort some people? Three, third question. Four, fourth question. Say one, two, three, or four to ask your question. ",
       "anotherQuestionMessage": "Do you have another question? ",
       "goodbyeMessage": "Goodbye! ",
