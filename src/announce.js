@@ -7,7 +7,8 @@ var sortingSongs = skillVariables["sortingSongs"];
 module.exports = {
   'PoemIntent': function () {
       // Handle Poem intent.
-      helper.playPoem(this,'poem');
+      var poem = helper.getPoemSpeech(this);
+      this.emit(':ask', poem, poem);
   },
   'ContinueIntent': function () {
       // Handle Continue intent.

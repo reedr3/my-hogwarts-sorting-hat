@@ -8,7 +8,16 @@ module.exports = {
     'ChooseQuestionIntent': function () {
         // TODO find answer to question that was chosen with this intent
         // emits answer to that question plus anotherQuestionMessage
-        var answer = "because i say so";
+        var question = parseInt(this.event.request.intent.slots.Question.value);
+        var questionId = question - 1;
+        var answer = helper.getQuestionSpeech(questionId);
+        // if  (answer == 1) {
+        //   this.emit(':ask', "yo", "sup");
+        // }
+        // else {
+        //   this.emit(':ask', "welp", "bugger");
+        // }
+        //var answer = "because i say so";
         this.emit(':ask', answer + messages["anotherQuestionMessage"], messages["anotherQuestionMessage"]);
     },
     'AMAZON.YesIntent': function () {

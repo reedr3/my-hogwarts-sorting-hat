@@ -2,7 +2,6 @@ var Alexa = require('alexa-sdk');
 
 var skillVariables = require("./skill-variables");
 var states = skillVariables["states"];
-var nodes = skillVariables["nodes"];
 var messages = skillVariables["messages"];
 
 var helper = require("./helper");
