@@ -9,12 +9,19 @@ module.exports = {
   // extra extra credit: have it keep a tally of people's names (or numbers at least) and which houses they were sorted into
 
   "sortingQuestions": [
-    "question 1 ",
-    "question 2 ",
-    "question 3 ",
-    "question 4 ",
-    "question 5 "
+    ["Which of the following would you most hate people to call you? Ordinary, ignorant, cowardly, or selfish. ", "Given the choice, would you rather invent a potion that would guarantee you love, glory, wisdom, or power? "],
+    ["question two one", "question two two"],
+    ["question three one", "question three two"],
+    ["question four one", "question four two"],
+    ["question five one", "question five two"]
   ],
+
+  "houseAnswers": {
+    "Gryffindor": ["cowardly", "glory", "g3", "g4", "g5"],
+    "Ravenclaw": ["ignorant", "wisdom", "r3", "r4", "r5"],
+    "Hufflepuff": ["selfish", "love", "h3", "h4", "h5"],
+    "Slytherin": ["ordinary", "power", "s3", "s4", "s5"]
+  },
 
   "houses": [
       "Gryffindor! ",
@@ -24,10 +31,10 @@ module.exports = {
   ],
 
   "poems": [
-     "Brave and stuff ",
-     "Really smart ",
-     "Honey badger don't give a shhh ",
-     "Cunning or what-evs "
+     "Brave and stuff. ",
+     "Really smart. ",
+     "Honey badger don't give a shhh. ",
+     "Cunning or what-evs. "
   ],
 
   "questions": [

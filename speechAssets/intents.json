@@ -36,7 +36,7 @@
 		 "slots": [
         {
           "name": "Answer",
-          "type": "AMAZON.NUMBER"
+          "type": "answerType"
         }]
 	}, {
 		"intent": "ReadyIntent",

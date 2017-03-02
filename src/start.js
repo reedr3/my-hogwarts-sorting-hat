@@ -16,7 +16,7 @@ module.exports = {
 
     'SortIntent': function () {
 
-        var firstQuestion = sortingQuestions[0];
+        var firstQuestion = sortingQuestions[0][0];
 
         this.attributes.Gryffindor = 0;
         this.attributes.Ravenclaw = 0;
@@ -24,6 +24,8 @@ module.exports = {
         this.attributes.Slytherin = 0;
 
         this.attributes.currentSortingQuestion = 0;
+        this.attributes.mostPoints = 0;
+        this.attributes.winners = [];
 
         this.handler.state = states.SORTINGMODE;
 
