@@ -1,9 +1,6 @@
 module.exports = {
 
   // TODO
-  // maybe pull sorting song selection into helper function that sets variable that lasts until program restarted
-  // - this helper function gets called in start state song intent, and then later nav state start intent just plays the same song saved to a variable from before (only new song if program restarted)
-
   // create separate file to run actual sorting (you know... the point of all this, lol)
   // extra credit: have it know if it's sorted a student already since it was last restarted so it can ask if want to sort another student or something
   // extra extra credit: have it keep a tally of people's names (or numbers at least) and which houses they were sorted into

@@ -16,16 +16,15 @@ module.exports = {
         // have a helper fn which scrambles order (maybe always have the 'not slytherin' question last)
         // if i really have too much time on my hands, could make a node progression so certain answers trigger certain questions, etc.. (could also determine the length based on which path down tree you take...)
 
-        // have a helper which determines next question to ask (like goes from q1 to q2 but also determines which of possible q2s etc)
-
         // gets the value of the answer the user gave
         var answer = this.event.request.intent.slots.Answer.value;
         helper.addHousePoint(this, answer);
 
         this.attributes.currentSortingQuestion += 1;
+        var whichNextQuestionIndex = helper.getRandomIntInclusive(0, 3);
 
         if (this.attributes.currentSortingQuestion <= 4) {
-          this.emit(':ask', sortingQuestions[this.attributes.currentSortingQuestion][0], sortingQuestions[this.attributes.currentSortingQuestion][0]);
+          this.emit(':ask', sortingQuestions[this.attributes.currentSortingQuestion][whichNextQuestionIndex], sortingQuestions[this.attributes.currentSortingQuestion][whichNextQuestionIndex]);
         }
         else if (this.attributes.currentSortingQuestion > 4) {
           var houseChoice = helper.winningHouse(this);

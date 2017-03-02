@@ -9,13 +9,15 @@ module.exports = {
 
     'SongIntent': function () {
       // plays one of the three possible sorting songs
-      var songIndex = helper.getRandomIntInclusive(0, 2);
+      var songIndex = this.attributes.songIndex;
       var songToPlay = sortingSongs[songIndex];
       this.emit(':ask', songToPlay + messages["afterSongMessage"], messages["afterSongMessage"]);
     },
 
     'SortIntent': function () {
-      var firstQuestion = sortingQuestions[0][0];
+
+      var whichFirstQuestionIndex = helper.getRandomIntInclusive(0, 3);
+      var firstQuestion = sortingQuestions[0][whichFirstQuestionIndex];
 
       this.attributes.Gryffindor = 0;
       this.attributes.Ravenclaw = 0;
