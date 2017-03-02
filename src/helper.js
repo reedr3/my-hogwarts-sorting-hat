@@ -44,27 +44,23 @@ module.exports = {
   },
 
   winningHouse: function (context) {
-    var gryffindorPoints = context.attributes.Gryffindor;
-    var ravenclawPoints = context.attributes.Ravenclaw;
-    var hufflepuffPoints = context.attributes.Hufflepuff;
-    var slytherinPoints = context.attributes.Slytherin;
 
-    var mostPoints = Math.max(gryffindorPoints, ravenclawPoints, hufflepuffPoints, slytherinPoints);
-    context.attributes.mostPoints = mostPoints;
+    var housePoints = [
+      context.attributes.Gryffindor,
+      context.attributes.Ravenclaw,
+      context.attributes.Hufflepuff,
+      context.attributes.Slytherin
+    ];
+
+    var highestPoints = Math.max.apply(Math, housePoints);
+    context.attributes.highestPoints = highestPoints;
 
     var winners = [];
 
-    if (gryffindorPoints == mostPoints) {
-      winners = winners + [0];
-    }
-    if (ravenclawPoints == mostPoints) {
-      winners = winners + [1];
-    }
-    if (hufflepuffPoints == mostPoints) {
-      winners = winners + [2];
-    }
-    if (slytherinPoints == mostPoints) {
-      winners = winners + [3];
+    for (i = 0; i < 4; i++) {
+      if (housePoints[i] == highestPoints) {
+        winners.push(i);
+      }
     }
 
     context.attributes.winners = winners;
@@ -73,8 +69,8 @@ module.exports = {
       return winners[0];
     }
     else {
-      var winnerIndex = this.getRandomIntInclusive(0, winners.length - 1);
-      return winners[winnerIndex];
+      var randomWinnerIndex = this.getRandomIntInclusive(0, winners.length - 1);
+      return winners[randomWinnerIndex];
     }
 
   },
