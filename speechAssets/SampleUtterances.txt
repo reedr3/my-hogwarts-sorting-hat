@@ -9,6 +9,11 @@ SortIntent sort again
 SortIntent sort another student
 SortIntent sort me
 
+AnswerIntent {Answer}
+
+ReadyIntent ready
+ReadyIntent I'm ready
+
 ContinueIntent continue
 
 PoemIntent hear more

@@ -12,7 +12,7 @@ var helper = require("./helper");
 // Called when the session starts.
 exports.handler = function (event, context, callback) {
     var alexa = Alexa.handler(event, context);
-    alexa.registerHandlers(newSessionHandler, startHandlers, announceHandlers, navHandlers, questionsHandlers);
+    alexa.registerHandlers(newSessionHandler, startHandlers, sortingHandlers, announceHandlers, navHandlers, questionsHandlers);
     alexa.execute();
 };
 
@@ -34,6 +34,8 @@ var newSessionHandler = {
 // --------------- Functions that control the skill's behavior -----------------------
 
 var startHandlers = Alexa.CreateStateHandler(states.STARTMODE, require("./start"));
+
+var sortingHandlers = Alexa.CreateStateHandler(states.SORTINGMODE, require("./sorting"));
 
 var announceHandlers = Alexa.CreateStateHandler(states.ANNOUNCEMODE, require("./announce"));
 
