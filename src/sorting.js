@@ -5,6 +5,7 @@ var messages = skillVariables["messages"];
 var sortingSongs = skillVariables["sortingSongs"];
 var sortingQuestions = skillVariables["sortingQuestions"];
 var houseAnswers = skillVariables["houseAnswers"];
+var houses = skillVariables["houses"];
 
 module.exports = {
 

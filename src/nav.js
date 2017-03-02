@@ -3,6 +3,7 @@ var skillVariables = require("./skill-variables");
 var states = skillVariables["states"];
 var messages = skillVariables["messages"];
 var sortingSongs = skillVariables["sortingSongs"];
+var sortingQuestions = skillVariables["sortingQuestions"];
 
 module.exports = {
 
@@ -14,17 +15,20 @@ module.exports = {
     },
 
     'SortIntent': function () {
-      // this all sets up the node traversal. the first node is where all the sorting happens.
-      // TODO later need an actual trivia game embedded in here. that will determine which node we go to next, based on which house wins
-      // for now, just randomly choose between the four houses
-      var houseChoice = helper.getRandomIntInclusive(0, 3);
-      this.attributes.houseChoice = houseChoice;
-      // set state to asking questions
-      this.handler.state = states.ANNOUNCEMODE;
-      // ask first question, the response will be handled in the askQuestionHandler
-      var house = helper.getHouseSpeech(houseChoice);
-      // ask the first question
-      this.emit(':ask', messages["preSortingMessage"] + "Sort sort sort. So much sorting. Sort all the students! " + messages["postSortingMessage"] + house + messages["postAnnounceMessage"], messages["postAnnounceMessage"]);
+      var firstQuestion = sortingQuestions[0][0];
+
+      this.attributes.Gryffindor = 0;
+      this.attributes.Ravenclaw = 0;
+      this.attributes.Hufflepuff = 0;
+      this.attributes.Slytherin = 0;
+
+      this.attributes.currentSortingQuestion = 0;
+      this.attributes.highestPoints = 0;
+      this.attributes.winners = [];
+
+      this.handler.state = states.SORTINGMODE;
+
+      this.emit(':ask', messages["preSortingMessage"] + firstQuestion, firstQuestion);
     },
 
     'AskQuestionIntent': function () {
