@@ -27,18 +27,33 @@ module.exports = {
   },
 
   addHousePoint: function (context, answer) {
-    for (i = 0; i < 5; i++) {
-      if (houseAnswers["Gryffindor"][i] == answer) {
-        context.attributes.Gryffindor += 1;
-      }
-      else if (houseAnswers["Ravenclaw"][i] == answer) {
-        context.attributes.Ravenclaw += 1;
-      }
-      else if (houseAnswers["Hufflepuff"][i] == answer) {
-        context.attributes.Hufflepuff += 1;
-      }
-      else if (houseAnswers["Slytherin"][i] == answer) {
-        context.attributes.Slytherin += 1;
+
+    if (answer == "not Gryffindor") {
+      context.attributes.Gryffindor -= 3;
+    }
+    else if (answer == "not Ravenclaw") {
+      context.attributes.Ravenclaw -= 3;
+    }
+    else if (answer == "not Hufflepuff") {
+      context.attributes.Hufflepuff -= 3;
+    }
+    else if (answer == "not Slytherin") {
+      context.attributes.Slytherin -= 3;
+    }
+    else {
+      for (i = 0; i < 38; i++) {
+        if (houseAnswers["Gryffindor"][i] == answer) {
+          context.attributes.Gryffindor += 1;
+        }
+        if (houseAnswers["Ravenclaw"][i] == answer) {
+          context.attributes.Ravenclaw += 1;
+        }
+        if (houseAnswers["Hufflepuff"][i] == answer) {
+          context.attributes.Hufflepuff += 1;
+        }
+        if (houseAnswers["Slytherin"][i] == answer) {
+          context.attributes.Slytherin += 1;
+        }
       }
     }
   },

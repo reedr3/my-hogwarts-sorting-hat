@@ -6,18 +6,80 @@ module.exports = {
   // extra extra credit: have it keep a tally of people's names (or numbers at least) and which houses they were sorted into
 
   "sortingQuestions": [
-    ["Which of the following would you most hate people to call you? Ordinary, ignorant, cowardly, or selfish. ", "Given the choice, would you rather invent a potion that would guarantee you love, glory, wisdom, or power? "],
-    ["question two one", "question two two"],
-    ["question three one", "question three two"],
-    ["question four one", "question four two"],
-    ["question five one", "question five two"]
+    [
+      "Which of the following would you most hate people to call you? Ordinary, ignorant, cowardly, or selfish. ",
+      "Given the choice, would you rather invent a potion that would guarantee you love, glory, wisdom, or power? ",
+      "How would you like to be known to history? The wise, the good, the great, or the bold. "
+    ],
+    [
+      "What kind of instument most pleases your ear? Violin, trumpet, piano, or drum. ",
+      "Once every century, the Flutterby bush produces flowers that adapt their scent to attract the unwary. If it lured you, it would smell of: a crackling log fire, the sea, fresh parchment, or home. ",
+      "Which road tempts you most? The wide sunny grassy lane, the narrow dark latern-lit alley, the twisting leaf-strewn path through woods, or the cobbled street lined with ancient buildings. "
+    ],
+    [
+      "Which would you rather be? Envied, imitated, trusted, praised, liked, or feared. ",
+      "Which of the following do you find most difficult to deal with? Hunger, cold, loneliness, boredom, or being ignored. ",
+      "Which would you rather be? Envied, imitated, trusted, praised, liked, or feared. "
+    ],
+    [
+      "What are you most looking forward to learning at Hogwarts? Apparition, transfiguration, broomstick flying, hexes and jinxes, all about magical creatures, secrets about the castle, every area of magic I can. ",
+      "If you could have any power, which would you choose? Read minds, invisibility, superhuman strength, speak to animals, change the past, change your appearance at will. ",
+      "Which of the following would you most like to study? Centaurs, goblins, merpeople, ghosts, vampires, werewolves, trolls. "
+    ],
+    [
+      "Dawn or dusk? ",
+      "Moon or stars? ",
+      "Forest or river? "
+    ],
+    [
+      "Black or white? ",
+      "Heads or tails? ",
+      "Left or right? "
+    ],
+    [
+      "Your wishes are important to my decision so if there is a particular house you do not wish to be a part of, I will take that into consideration. Simply say which house you don't want to be in, for example say not Slytherin. Or say any is fine. ",
+      "Your wishes are important to my decision so if there is a particular house you do not wish to be a part of, I will take that into consideration. Simply say which house you don't want to be in, for example say not Slytherin. Or say any is fine. ",
+      "Your wishes are important to my decision so if there is a particular house you do not wish to be a part of, I will take that into consideration. Simply say which house you don't want to be in, for example say not Slytherin. Or say any is fine. "
+    ]
   ],
 
   "houseAnswers": {
-    "Gryffindor": ["cowardly", "glory", "g3", "g4", "g5"],
-    "Ravenclaw": ["ignorant", "wisdom", "r3", "r4", "r5"],
-    "Hufflepuff": ["selfish", "love", "h3", "h4", "h5"],
-    "Slytherin": ["ordinary", "power", "s3", "s4", "s5"]
+
+    "Gryffindor": [
+      "cowardly", "glory", "the bold", "bold", "the trumpet", "trumpet", "a crackling log fire",
+      "crackling log fire", "log fire", "imitated", "envied", "being ignored", "hunger", "secrets about the castle",
+      "secrets", "castle secrets", "broomstick flying", "flying", "invisibility", "superhuman strength", "werewolves",
+      "trolls", "the twisting leaf-strewn path through woods", "the path through the woods", "path through the woods", "woods", "path through woods", "the twisting path through the woods",
+      "twisting path through the woods", "the twisting path through woods", "twisting path through woods", "twisting path through the woods", "dawn", "stars", "forest",
+      "black", "heads", "right"
+    ],
+
+    "Ravenclaw": [
+      "ignorant", "wisdom", "the wise", "wise", "the violin", "violin", "fresh parchment",
+      "parchment", "trusted", "praised", "boredom", "cold", "every area of magic I can", "every area of magic",
+      "every area", "transfiguration", "read minds", "change the past", "centaurs", "merpeople", "the cobbled street",
+      "the cobbled street line with ancient buildings", "the cobbled street with buildings", "dusk", "moon", "river", "white", "heads",
+      "left", "filler", "filler", "filler", "filler", "filler", "filler",
+      "filler", "filler", "filler"
+    ],
+
+    "Hufflepuff": [
+      "selfish", "love", "the good", "good", "the drum", "drum", "home",
+      "trusted", "liked", "hunger", "loneliness", "apparition", "all about magical creatures", "magical creatures",
+      "speak to animals", "change your appearance at will", "change your appearance", "ghosts", "centaurs", "the wide sunny grassy lane", "sunny grassy lane",
+      "grassy lane", "dawn", "stars", "river", "white", "tails", "right",
+      "filler", "filler", "filler", "filler", "filler", "filler", "filler",
+      "filler", "filler", "filler"
+    ],
+
+    "Slytherin": [
+      "ordinary", "power", "the great", "great", "the piano", "piano", "the sea",
+      "sea", "envied", "feared", "cold", "being ignored", "hexes and jinxes", "hexes",
+      "jinxes", "broomstick flying", "flying", "read minds", "invisibility", "goblins", "vampires",
+      "the narrow dark latern-lit alley", "the narrow alley", "narrow dark alley", "alley", "dusk", "moon", "forest",
+      "black", "tails", "left", "filler", "filler", "filler", "filler",
+      "filler", "filler", "filler"
+    ]
   },
 
   "houses": [
@@ -28,17 +90,17 @@ module.exports = {
   ],
 
   "poems": [
-     "Brave and stuff. ",
-     "Really smart. ",
-     "Honey badger don't give a shhh. ",
-     "Cunning or what-evs. "
+     "You've been sorted into Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. ",
+     "You've been sorted into Ravenclaw, Since you've a ready mind, Where those of wit and learning, Will always find their kind. ",
+     "You've been sorted into Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. Also, Honey badger don't give a shit. ",
+     "You've been sorted into Slytherin, Where you'll make your true friends. Those cunning folk use any means, To achieve their ends. "
   ],
 
   "questions": [
-     "For some it is a clear choice, others are harder to decide. ",
-     "Witty answer about being right or something. ",
-     "Witty answer number three. ",
-     "Witty answer number four. "
+     "For some it is clear where they belong. Others are harder and I need more time to decide. ",
+     "Ah yes, you were particularly difficult to sort, but I stand by what I said. ", // could make this more fun/complicated later by creating an attributes variable to store the most recently sorted student's house and say "i stand by what i said, you will do well in __"
+     "My quest is for the holy grail. No wait, I mean... My quest is to sort the students of Hogwarts into their houses. ",
+     "I'm a hat, I don't have eyes. Octarine sounds like a nice color though. Very magical. "
   ],
 
   "states": {
@@ -52,14 +114,14 @@ module.exports = {
   "messages": {
       "welcomeMessage": "Welcome to hogworts! Before you begin your studies you must be sorted into your houses. While here, your house will be like your family. Lets begin! Do you want to hear the sorting song or do you want to skip to the sorting ceremony? Say begin song or say begin sorting. ",
       "repeatWelcomeMessage": "Say begin song or say begin sorting. ",
-      "afterSongMessage": "Heed well my words. Would you like to begin the sorting now? Say begin sorting. ",
+      "afterSongMessage": "Would you like to begin the sorting now? Say begin sorting. ",
       "preSortingMessage": "Put me on so I can sort you! ",
       "endOfSortingMessage": "I know just what to do with you! Are you ready to hear your house? Take me off so I can announce your house! Then say ready. ",
       "postSortingMessage": "Better be ",
       "postAnnounceMessage": "Would you like to hear more about your house or continue? Say hear more or say continue. ",
       "continueMessage": "Please say continue. ",
       "navMessage": "Would you like to hear the sorting song again? Or would you like to sort another student? Or would the student just sorted like to ask me some questions? Say begin song, or say sort another student, or say I have a question (and put the hat back on). Or say mischief managed to finish. ",
-      "chooseQuestionMessage": "Bee in your bonnet? Which of the following questions would you like to ask? One, did you put me in the right house? Two, why do you take longer to sort some people? Three, third question. Four, fourth question. Say one, two, three, or four to ask your question. ",
+      "chooseQuestionMessage": "Bee in your bonnet? Which of the following questions would you like to ask? One, did you put me in the right house? Two, why do you take longer to sort some people? Three, what is your quest? Four, what is your favorite color? Say one, two, three, or four to ask your question. ",
       "anotherQuestionMessage": "Do you have another question? ",
       "goodbyeMessage": "Goodbye! ",
       "helpMessage": "I am the sorting hat! I can sing my song for you, or I can ask you questions and sort you into your house, or you can ask me questions after I sort you. ",
@@ -69,9 +131,46 @@ module.exports = {
   },
 
   "sortingSongs": [
-    "sorting song 1. ",
-    "sorting song 2. ",
-    "sorting song 3. "
+
+    "Oh, you may not think I'm pretty, But don't judge on what you see. I'll eat myself if you can find, A smarter hat than me. " +
+    "You can keep your bowler's black, Your top hats sleek and tall, For I'm the Hogwarts Sorting Hat, And I can cap them all. " +
+    "You might belong in Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. " +
+    "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. " +
+    "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
+    "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
+    "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "A thousand years or more ago, When I was newly sewn, There lived four wizards of renown, Whose names are still well known. " +
+    "Bold Gryffindor, from wild moor, Fair Ravenclaw, from glen, Sweet Hufflepuff, from valley broad, Shrewd Slytherin, from fen. " +
+    "They shared a wish, a hope, a dream, They hatched a daring plan To educate young sorcerers Thus Hogwarts School began. " +
+    "Now each of these four founders Formed their own house, for each Did value different virtues In the ones they had to teach. " +
+    "By Gryffindor, the bravest were Prized far beyond the rest; For Ravenclaw, the cleverest Would always be the best. " +
+    "For Hufflepuff, hard workers were Most worthy of admission; And power-hungry Slytherin Loved those of great ambition. " +
+    "While still alive they did divide Their favorites from the throng, Yet how to pick the worthy ones When they were dead and gone? " +
+    "'Twas Gryffindor who found the way, He whipped me off his head The founders put some brains in me So I could choose instead! " +
+    "Now slip me snug about your ears, I've never yet been wrong, I'll have to look inside your mind And tell where you belong! ",
+
+    "In times of old when I was new And Hogwarts barely started The founders of our noble school Thought never to be parted: " +
+    "United by a common goal, They had the selfsame yearning, To make the world's best magic school And pass along their learning. " +
+    "Together we will build and teach! The four good friends decided And never did they dream that they Might someday be divided, " +
+    "For were there such friends anywhere As Slytherin and Gryffindor? Unless it was the second pair Of Hufflepuff and Ravenclaw? " +
+    "So how could it have gone so wrong? How could such friendships fail? Why, I was there and so can tell The whole sad, sorry tale. " +
+    "Said Slytherin, We'll teach just those Whose ancestry is purest. Said Ravenclaw, We'll teach those whose Intelligence is surest. " +
+    "Said Gryffindor, We'll teach all those With brave deeds to their name, Said Hufflepuff, I'll teach the lot, And treat them just the same. " +
+    "These differences caused little strife When first they came to light, For each of the four founders had A House in which they might, " +
+    "Take only those they wanted, so, For instance, Slytherin Took only pure-blood wizards Of great cunning, just like him, " +
+    "And those of sharpest mind Were taught by Ravenclaw While the bravest and the boldest Went to daring Gryffindor. " +
+    "Good Hufflepuff, she took the rest, And taught them all she knew, Thus the Houses and their founders Retained friendships firm and true. " +
+    "So Hogwarts worked in harmony For several happy years, But then discord crept among us Feeding on our faults and fears. " +
+    "The Houses that, like pillars four, Had once held up our school, Now turned upon each other and, Divided, sought to rule. " +
+    "And for a while it seemed the school Must meet an early end, What with dueling and with fighting And the clash of friend on friend. " +
+    "And at last there came a morning When old Slytherin departed And though the fighting then died out He left us quite downhearted. " +
+    "And never since the founders four Were whittled down to three Have the Houses been united As they once were meant to be. " +
+    "And now the Sorting Hat is here And you all know the score: I sort you into Houses Because that is what I'm for, " +
+    "But this year I'll go further, Listen closely to my song: Though condemned I am to split you Still I worry that it's wrong, " +
+    "Though I must fulfill my duty And must quarter every year Still I wonder whether sorting May not bring the end I fear. " +
+    "Oh, know the perils, read the signs, The warning history shows, For our Hogwarts is in danger From external, deadly foes " +
+    "And we must unite inside her Or we'll crumble from within I have told you, I have warned you.... Let the Sorting now begin. "
   ]
 
 };

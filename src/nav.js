@@ -9,14 +9,19 @@ module.exports = {
 
     'SongIntent': function () {
       // plays one of the three possible sorting songs
-      var songIndex = this.attributes.songIndex;
+      if (this.attributes.songIndex) {
+        var songIndex = this.attributes.songIndex;
+      }
+      else {
+        var songIndex = helper.getRandomIntInclusive(0, 2);
+      }
       var songToPlay = sortingSongs[songIndex];
       this.emit(':ask', songToPlay + messages["afterSongMessage"], messages["afterSongMessage"]);
     },
 
     'SortIntent': function () {
 
-      var whichFirstQuestionIndex = helper.getRandomIntInclusive(0, 3);
+      var whichFirstQuestionIndex = helper.getRandomIntInclusive(0, 2);
       var firstQuestion = sortingQuestions[0][whichFirstQuestionIndex];
 
       this.attributes.Gryffindor = 0;

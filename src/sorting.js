@@ -21,12 +21,12 @@ module.exports = {
         helper.addHousePoint(this, answer);
 
         this.attributes.currentSortingQuestion += 1;
-        var whichNextQuestionIndex = helper.getRandomIntInclusive(0, 3);
+        var whichNextQuestionIndex = helper.getRandomIntInclusive(0, 2);
 
-        if (this.attributes.currentSortingQuestion <= 4) {
+        if (this.attributes.currentSortingQuestion <= 6) {
           this.emit(':ask', sortingQuestions[this.attributes.currentSortingQuestion][whichNextQuestionIndex], sortingQuestions[this.attributes.currentSortingQuestion][whichNextQuestionIndex]);
         }
-        else if (this.attributes.currentSortingQuestion > 4) {
+        else if (this.attributes.currentSortingQuestion > 6) {
           var houseChoice = helper.winningHouse(this);
           this.attributes.houseChoice = houseChoice;
           this.emit(':ask', messages["endOfSortingMessage"], messages["endOfSortingMessage"]);

@@ -17,7 +17,7 @@ module.exports = {
 
     'SortIntent': function () {
 
-        var whichFirstQuestionIndex = helper.getRandomIntInclusive(0, 3);
+        var whichFirstQuestionIndex = helper.getRandomIntInclusive(0, 2);
         var firstQuestion = sortingQuestions[0][whichFirstQuestionIndex];
 
         this.attributes.Gryffindor = 0;
