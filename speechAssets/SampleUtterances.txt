@@ -9,8 +9,6 @@ SortIntent sort again
 SortIntent sort another student
 SortIntent sort me
 
-AnswerIntent {Answer}
-
 ReadyIntent ready
 ReadyIntent I'm ready
 
@@ -37,12 +35,14 @@ AskQuestionIntent I want to ask the sorting hat a question
 
 ChooseQuestionIntent {Question}
 
-AMAZON.StopIntent stop
-AMAZON.StopIntent off
-AMAZON.StopIntent mischief managed
+AnswerIntent {Answer}
 
 AMAZON.StartOverIntent start over
 AMAZON.StartOverIntent restart
 AMAZON.StartOverIntent start again
 AMAZON.StartOverIntent play again
 AMAZON.StartOverIntent I solemnly swear I am up to no good
+
+AMAZON.StopIntent stop
+AMAZON.StopIntent off
+AMAZON.StopIntent mischief managed

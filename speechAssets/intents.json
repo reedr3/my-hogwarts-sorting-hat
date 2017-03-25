@@ -1,77 +1,61 @@
 {
-	"intents": [{
-      "intent": "AMAZON.YesIntent",
-      "slots": []
-    }, {
-      "intent": "AMAZON.NoIntent",
-      "slots": []
-    }, {
-		"intent": "AMAZON.HelpIntent",
-		"slots": []
-	}, {
-		"intent": "AMAZON.StopIntent",
-		"slots": []
-	}, {
-		"intent": "AMAZON.CancelIntent",
-		"slots": []
-	},{
-		"intent": "AMAZON.StartOverIntent",
-		"slots": []
-	}, {
-		"intent": "SongIntent",
-		 "slots": [
-        {
-          "name": "Song",
-          "type": "songType"
-        }]
-	}, {
-		"intent": "SortIntent",
-		 "slots": [
-        {
-          "name": "Sort",
-          "type": "sortType"
-        }]
-	}, {
-		"intent": "AnswerIntent",
-		 "slots": [
-        {
-          "name": "Answer",
-          "type": "answerType"
-        }]
-	}, {
-		"intent": "ReadyIntent",
-		 "slots": [
-        {
-          "name": "Ready",
-          "type": "readyType"
-        }]
-	}, {
-		"intent": "ContinueIntent",
-		 "slots": [
-        {
-          "name": "Continue",
-          "type": "continueType"
-        }]
-	}, {
-		"intent": "PoemIntent",
-		 "slots": [
-        {
-          "name": "Poem",
-          "type": "poemType"
-        }]
-	}, {
-		"intent": "AskQuestionIntent",
-		 "slots": [
-        {
-          "name": "AskQuestion",
-          "type": "askQuestionType"
-        }]
-	}, {
-		"intent": "ChooseQuestionIntent",
-		 "slots": [
+  "intents": [
+    {
+      "intent": "SongIntent"
+    },
+    {
+      "intent": "SortIntent"
+    },
+    {
+      "intent": "ReadyIntent"
+    },
+    {
+      "intent": "ContinueIntent"
+    },
+    {
+      "intent": "PoemIntent"
+    },
+    {
+      "intent": "AskQuestionIntent"
+    },
+    {
+      "intent": "ChooseQuestionIntent",
+      "slots": [
         {
           "name": "Question",
           "type": "AMAZON.NUMBER"
-        }]
-	}]
+        }
+      ]
+    },
+    {
+      "intent": "AnswerIntent",
+      "slots": [
+        {
+          "name": "Answer",
+          "type": "answerType"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.StartOverIntent"
+    },
+    {
+      "intent": "AMAZON.RepeatIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.YesIntent"
+    },
+    {
+      "intent": "AMAZON.NoIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
 }
