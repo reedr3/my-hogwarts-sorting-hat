@@ -8,12 +8,12 @@ var sortingQuestions = skillVariables["sortingQuestions"];
 module.exports = {
 
     'SongIntent': function () {
-      // plays one of the three possible sorting songs
+      // plays one of the three possible sorting songs (very much skewed in favor of first and shortest song)
       if (this.attributes.songIndex) {
         var songIndex = this.attributes.songIndex;
       }
       else {
-        var songIndex = helper.getRandomIntInclusive(0, 2);
+        var songIndex = helper.getRandomIntInclusive(0, 19);
       }
       var songToPlay = sortingSongs[songIndex];
       this.emit(':ask', songToPlay + messages["afterSongMessage"], messages["afterSongMessage"]);
@@ -21,15 +21,17 @@ module.exports = {
 
     'SortIntent': function () {
 
-      var whichFirstQuestionIndex = helper.getRandomIntInclusive(0, 2);
-      var firstQuestion = sortingQuestions[0][whichFirstQuestionIndex];
-
       this.attributes.Gryffindor = 0;
       this.attributes.Ravenclaw = 0;
       this.attributes.Hufflepuff = 0;
       this.attributes.Slytherin = 0;
 
       this.attributes.currentSortingQuestion = 0;
+      this.attributes.nonsenseAnswer = false;
+      this.attributes.currentSortingQuestionVersion = helper.getRandomIntInclusive(0, 2);
+
+      var firstQuestion = sortingQuestions[0][this.attributes.currentSortingQuestionVersion];
+
       this.attributes.highestPoints = 0;
       this.attributes.winners = [];
 
@@ -58,6 +60,6 @@ module.exports = {
         this.emit(':ask', messages["helpMessage"], messages["helpMessage"]);
     },
     'Unhandled': function () {
-        this.emit(':ask', messages["navMessage"], messages["navMessage"]);
+        this.emit(':ask', messages["unhandleMessage"] + messages["shortNavMessage"], messages["shortNavMessage"]);
     }
 };

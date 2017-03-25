@@ -51,7 +51,7 @@ module.exports = {
       "secrets", "castle secrets", "broomstick flying", "flying", "invisibility", "superhuman strength", "werewolves",
       "trolls", "the twisting leaf-strewn path through woods", "the path through the woods", "path through the woods", "woods", "path through woods", "the twisting path through the woods",
       "twisting path through the woods", "the twisting path through woods", "twisting path through woods", "twisting path through the woods", "dawn", "stars", "forest",
-      "black", "heads", "right"
+      "black", "heads", "right", "fire", "ignored", "strength"
     ],
 
     "Ravenclaw": [
@@ -60,7 +60,7 @@ module.exports = {
       "every area", "transfiguration", "read minds", "change the past", "centaurs", "merpeople", "the cobbled street",
       "the cobbled street line with ancient buildings", "the cobbled street with buildings", "dusk", "moon", "river", "white", "heads",
       "left", "filler", "filler", "filler", "filler", "filler", "filler",
-      "filler", "filler", "filler"
+      "filler", "filler", "filler", "the cobbled street lined with buildings", "the cobbled street with ancient buildings", "change past"
     ],
 
     "Hufflepuff": [
@@ -69,7 +69,7 @@ module.exports = {
       "speak to animals", "change your appearance at will", "change your appearance", "ghosts", "centaurs", "the wide sunny grassy lane", "sunny grassy lane",
       "grassy lane", "dawn", "stars", "river", "white", "tails", "right",
       "filler", "filler", "filler", "filler", "filler", "filler", "filler",
-      "filler", "filler", "filler"
+      "the wide grassy lane", "the wide lane", "the sunny grassy lane", "the grassy lane", "change appearance", "creatures"
     ],
 
     "Slytherin": [
@@ -78,7 +78,7 @@ module.exports = {
       "jinxes", "broomstick flying", "flying", "read minds", "invisibility", "goblins", "vampires",
       "the narrow dark latern-lit alley", "the narrow alley", "narrow dark alley", "alley", "dusk", "moon", "forest",
       "black", "tails", "left", "filler", "filler", "filler", "filler",
-      "filler", "filler", "filler"
+      "filler", "the latern-lit alley", "the narrow latern-lit alley", "the dark alley", "the alley", "ignored"
     ]
   },
 
@@ -92,15 +92,13 @@ module.exports = {
   "poems": [
      "You've been sorted into Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. ",
      "You've been sorted into Ravenclaw, Since you've a ready mind, Where those of wit and learning, Will always find their kind. ",
-     "You've been sorted into Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. Also, Honey badger don't give a shit. ",
+     "You've been sorted into Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. ",
      "You've been sorted into Slytherin, Where you'll make your true friends. Those cunning folk use any means, To achieve their ends. "
   ],
 
   "questions": [
-     "For some it is clear where they belong. Others are harder and I need more time to decide. ",
-     "Ah yes, you were particularly difficult to sort, but I stand by what I said. ", // could make this more fun/complicated later by creating an attributes variable to store the most recently sorted student's house and say "i stand by what i said, you will do well in __"
-     "My quest is for the holy grail. No wait, I mean... My quest is to sort the students of Hogwarts into their houses. ",
-     "I'm a hat, I don't have eyes. Octarine sounds like a nice color though. Very magical. "
+     "Ah yes, you were particularly difficult to sort, but I stand by what I said. ",
+     "For some it is clear where they belong. Others are harder and I need more time to decide. "
   ],
 
   "states": {
@@ -115,19 +113,19 @@ module.exports = {
       "welcomeMessage": "Welcome to hogworts! Before you begin your studies you must be sorted into your houses. While here, your house will be like your family. Lets begin! Do you want to hear the sorting song or do you want to skip to the sorting ceremony? Say begin song or say begin sorting. ",
       "repeatWelcomeMessage": "Say begin song or say begin sorting. ",
       "afterSongMessage": "Would you like to begin the sorting now? Say begin sorting. ",
-      "preSortingMessage": "Put me on so I can sort you! ",
-      "endOfSortingMessage": "I know just what to do with you! Are you ready to hear your house? Take me off so I can announce your house! Then say ready. ",
+      "preSortingMessage": "Lets begin! ",
+      "endOfSortingMessage": "I know just what to do with you! Are you ready to hear your house? Say ready. ",
       "postSortingMessage": "Better be ",
       "postAnnounceMessage": "Would you like to hear more about your house or continue? Say hear more or say continue. ",
       "continueMessage": "Please say continue. ",
-      "navMessage": "Would you like to hear the sorting song again? Or would you like to sort another student? Or would the student just sorted like to ask me some questions? Say begin song, or say sort another student, or say I have a question (and put the hat back on). Or say mischief managed to finish. ",
-      "chooseQuestionMessage": "Bee in your bonnet? Which of the following questions would you like to ask? One, did you put me in the right house? Two, why do you take longer to sort some people? Three, what is your quest? Four, what is your favorite color? Say one, two, three, or four to ask your question. ",
+      "navMessage": "Would you like to hear the sorting song again? Or would you like to sort another student? Or would you like to ask me some questions? Say begin song, or say sort another student, or say I have a question, or say mischief managed to finish. ",
+      "chooseQuestionMessage": "Bee in your bonnet? Which of the following questions would you like to ask? One, did you put me in the right house? Two, why do you take longer to sort some people? Say one or two to ask your question. ",
       "anotherQuestionMessage": "Do you have another question? ",
       "goodbyeMessage": "Goodbye! ",
       "helpMessage": "I am the sorting hat! I can sing my song for you, or I can ask you questions and sort you into your house, or you can ask me questions after I sort you. ",
       "startOverMessage": "Would you like to start the program over? Say start over. ",
       "unhandleMessage": "Sorry, I didn't catch that. ",
-      "sortingHelpMessage": "Say one, two, three, or four to answer. "
+      "shortNavMessage": "Say begin song, or say sort another student, or say I have a question, or say mischief managed to finish. "
   },
 
   "sortingSongs": [
@@ -139,6 +137,144 @@ module.exports = {
     "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
     "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
     "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "Oh, you may not think I'm pretty, But don't judge on what you see. I'll eat myself if you can find, A smarter hat than me. " +
+    "You can keep your bowler's black, Your top hats sleek and tall, For I'm the Hogwarts Sorting Hat, And I can cap them all. " +
+    "You might belong in Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. " +
+    "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. " +
+    "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
+    "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
+    "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "Oh, you may not think I'm pretty, But don't judge on what you see. I'll eat myself if you can find, A smarter hat than me. " +
+    "You can keep your bowler's black, Your top hats sleek and tall, For I'm the Hogwarts Sorting Hat, And I can cap them all. " +
+    "You might belong in Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. " +
+    "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. " +
+    "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
+    "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
+    "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "Oh, you may not think I'm pretty, But don't judge on what you see. I'll eat myself if you can find, A smarter hat than me. " +
+    "You can keep your bowler's black, Your top hats sleek and tall, For I'm the Hogwarts Sorting Hat, And I can cap them all. " +
+    "You might belong in Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. " +
+    "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. " +
+    "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
+    "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
+    "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "Oh, you may not think I'm pretty, But don't judge on what you see. I'll eat myself if you can find, A smarter hat than me. " +
+    "You can keep your bowler's black, Your top hats sleek and tall, For I'm the Hogwarts Sorting Hat, And I can cap them all. " +
+    "You might belong in Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. " +
+    "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. " +
+    "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
+    "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
+    "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "Oh, you may not think I'm pretty, But don't judge on what you see. I'll eat myself if you can find, A smarter hat than me. " +
+    "You can keep your bowler's black, Your top hats sleek and tall, For I'm the Hogwarts Sorting Hat, And I can cap them all. " +
+    "You might belong in Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. " +
+    "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. " +
+    "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
+    "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
+    "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "Oh, you may not think I'm pretty, But don't judge on what you see. I'll eat myself if you can find, A smarter hat than me. " +
+    "You can keep your bowler's black, Your top hats sleek and tall, For I'm the Hogwarts Sorting Hat, And I can cap them all. " +
+    "You might belong in Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. " +
+    "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. " +
+    "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
+    "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
+    "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "Oh, you may not think I'm pretty, But don't judge on what you see. I'll eat myself if you can find, A smarter hat than me. " +
+    "You can keep your bowler's black, Your top hats sleek and tall, For I'm the Hogwarts Sorting Hat, And I can cap them all. " +
+    "You might belong in Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. " +
+    "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. " +
+    "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
+    "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
+    "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "Oh, you may not think I'm pretty, But don't judge on what you see. I'll eat myself if you can find, A smarter hat than me. " +
+    "You can keep your bowler's black, Your top hats sleek and tall, For I'm the Hogwarts Sorting Hat, And I can cap them all. " +
+    "You might belong in Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. " +
+    "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. " +
+    "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
+    "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
+    "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "Oh, you may not think I'm pretty, But don't judge on what you see. I'll eat myself if you can find, A smarter hat than me. " +
+    "You can keep your bowler's black, Your top hats sleek and tall, For I'm the Hogwarts Sorting Hat, And I can cap them all. " +
+    "You might belong in Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. " +
+    "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. " +
+    "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
+    "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
+    "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "Oh, you may not think I'm pretty, But don't judge on what you see. I'll eat myself if you can find, A smarter hat than me. " +
+    "You can keep your bowler's black, Your top hats sleek and tall, For I'm the Hogwarts Sorting Hat, And I can cap them all. " +
+    "You might belong in Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. " +
+    "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. " +
+    "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
+    "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
+    "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "Oh, you may not think I'm pretty, But don't judge on what you see. I'll eat myself if you can find, A smarter hat than me. " +
+    "You can keep your bowler's black, Your top hats sleek and tall, For I'm the Hogwarts Sorting Hat, And I can cap them all. " +
+    "You might belong in Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. " +
+    "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. " +
+    "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
+    "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
+    "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "Oh, you may not think I'm pretty, But don't judge on what you see. I'll eat myself if you can find, A smarter hat than me. " +
+    "You can keep your bowler's black, Your top hats sleek and tall, For I'm the Hogwarts Sorting Hat, And I can cap them all. " +
+    "You might belong in Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. " +
+    "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. " +
+    "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
+    "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
+    "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "Oh, you may not think I'm pretty, But don't judge on what you see. I'll eat myself if you can find, A smarter hat than me. " +
+    "You can keep your bowler's black, Your top hats sleek and tall, For I'm the Hogwarts Sorting Hat, And I can cap them all. " +
+    "You might belong in Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. " +
+    "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. " +
+    "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
+    "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
+    "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "Oh, you may not think I'm pretty, But don't judge on what you see. I'll eat myself if you can find, A smarter hat than me. " +
+    "You can keep your bowler's black, Your top hats sleek and tall, For I'm the Hogwarts Sorting Hat, And I can cap them all. " +
+    "You might belong in Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. " +
+    "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. " +
+    "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
+    "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
+    "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "Oh, you may not think I'm pretty, But don't judge on what you see. I'll eat myself if you can find, A smarter hat than me. " +
+    "You can keep your bowler's black, Your top hats sleek and tall, For I'm the Hogwarts Sorting Hat, And I can cap them all. " +
+    "You might belong in Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. " +
+    "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. " +
+    "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
+    "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
+    "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "Oh, you may not think I'm pretty, But don't judge on what you see. I'll eat myself if you can find, A smarter hat than me. " +
+    "You can keep your bowler's black, Your top hats sleek and tall, For I'm the Hogwarts Sorting Hat, And I can cap them all. " +
+    "You might belong in Gryffindor, Where dwell the brave of heart, Their daring, nerve, and chivalry, set Gryffindors apart. " +
+    "You might belong in Hufflepuff, Where they are just and loyal, Those patient Hufflepuffs are true, and unafraid of toil. " +
+    "Or yet in wise old Ravenclaw, If you've a ready mind, Where those of wit and learning, Will always find their kind. " +
+    "Or perhaps in Slytherin, You'll make your true friends, Those cunning folk use any means, To achieve their ends. " +
+    "So put me on! Don't be afraid! And don't get in a flap! You're in safe hands (though I have none), For I'm a Thinking Cap! ",
+
+    "A thousand years or more ago, When I was newly sewn, There lived four wizards of renown, Whose names are still well known. " +
+    "Bold Gryffindor, from wild moor, Fair Ravenclaw, from glen, Sweet Hufflepuff, from valley broad, Shrewd Slytherin, from fen. " +
+    "They shared a wish, a hope, a dream, They hatched a daring plan To educate young sorcerers Thus Hogwarts School began. " +
+    "Now each of these four founders Formed their own house, for each Did value different virtues In the ones they had to teach. " +
+    "By Gryffindor, the bravest were Prized far beyond the rest; For Ravenclaw, the cleverest Would always be the best. " +
+    "For Hufflepuff, hard workers were Most worthy of admission; And power-hungry Slytherin Loved those of great ambition. " +
+    "While still alive they did divide Their favorites from the throng, Yet how to pick the worthy ones When they were dead and gone? " +
+    "'Twas Gryffindor who found the way, He whipped me off his head The founders put some brains in me So I could choose instead! " +
+    "Now slip me snug about your ears, I've never yet been wrong, I'll have to look inside your mind And tell where you belong! ",
 
     "A thousand years or more ago, When I was newly sewn, There lived four wizards of renown, Whose names are still well known. " +
     "Bold Gryffindor, from wild moor, Fair Ravenclaw, from glen, Sweet Hufflepuff, from valley broad, Shrewd Slytherin, from fen. " +

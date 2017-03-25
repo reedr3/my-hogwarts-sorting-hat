@@ -20,16 +20,18 @@ module.exports = {
         var answer = this.event.request.intent.slots.Answer.value;
         helper.addHousePoint(this, answer);
 
-        this.attributes.currentSortingQuestion += 1;
-        var whichNextQuestionIndex = helper.getRandomIntInclusive(0, 2);
-
-        if (this.attributes.currentSortingQuestion <= 6) {
-          this.emit(':ask', sortingQuestions[this.attributes.currentSortingQuestion][whichNextQuestionIndex], sortingQuestions[this.attributes.currentSortingQuestion][whichNextQuestionIndex]);
+        if (this.attributes.currentSortingQuestion <= 5 && this.attributes.nonsenseAnswer == false) {
+          this.attributes.currentSortingQuestion += 1;
+          this.attributes.currentSortingQuestionVersion = helper.getRandomIntInclusive(0, 2);
+          this.emit(':ask', sortingQuestions[this.attributes.currentSortingQuestion][this.attributes.currentSortingQuestionVersion], sortingQuestions[this.attributes.currentSortingQuestion][this.attributes.currentSortingQuestionVersion]);
         }
-        else if (this.attributes.currentSortingQuestion > 6) {
+        else if (this.attributes.currentSortingQuestion > 5 && this.attributes.nonsenseAnswer == false) {
           var houseChoice = helper.winningHouse(this);
           this.attributes.houseChoice = houseChoice;
           this.emit(':ask', messages["endOfSortingMessage"], messages["endOfSortingMessage"]);
+        }
+        else if (this.attributes.nonsenseAnswer == true) {
+          this.emit(':ask', messages["unhandleMessage"] + sortingQuestions[this.attributes.currentSortingQuestion][this.attributes.currentSortingQuestionVersion], sortingQuestions[this.attributes.currentSortingQuestion][this.attributes.currentSortingQuestionVersion]);
         }
     },
 
@@ -56,6 +58,6 @@ module.exports = {
          this.emit(':ask', messages["helpMessage"], messages["helpMessage"]);
      },
      'Unhandled': function () {
-         this.emit(':ask', messages["unhandleMessage"] + messages["sortingHelpMessage"], messages["sortingHelpMessage"]);
+         this.emit(':ask', messages["unhandleMessage"], messages["unhandleMessage"]);
      }
 };
