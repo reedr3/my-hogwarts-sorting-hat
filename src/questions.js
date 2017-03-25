@@ -40,6 +40,6 @@ module.exports = {
          this.emit(':ask', messages["helpMessage"], messages["helpMessage"]);
      },
      'Unhandled': function () {
-         this.emit(':ask', messages["anotherQuestionMessage"], messages["anotherQuestionMessage"]);
+         this.emit(':ask', messages["unhandleMessage"] + messages["anotherQuestionMessage"], messages["anotherQuestionMessage"]);
      }
 };

@@ -33,6 +33,7 @@ piano
 a crackling log fire
 crackling log fire
 log fire
+fire
 fresh parchment
 parchment
 home
@@ -49,16 +50,26 @@ twisting path through the woods
 the twisting path through woods
 the cobbled street
 the cobbled street lined with ancient buildings
+the cobbled street lined with buildings
+the cobbled street with ancient buildings
 the cobbled street with buildings
 the wide sunny grassy lane
+the wide grassy lane
+the wide lane
+the sunny grassy lane
 sunny grassy lane
+the grassy lane
 grassy lane
 the narrow dark latern-lit alley
+the narrow latern-lit alley
+the latern-lit alley
 the narrow alley
 the narrow dark alley
 narrow alley
 narrow dark alley
+the dark alley
 dark alley
+the alley
 alley
 
 
@@ -73,6 +84,7 @@ liked
 feared
 
 being ignored
+ignored
 hunger
 boredom
 cold
@@ -94,17 +106,21 @@ transfiguration
 apparition
 all about magical creatures
 magical creatures
+creatures
 hexes and jinxes
 hexes
 jinxes
 
 invisibility
 superhuman strength
+strength
 read minds
 change the past
+change past
 speak to animals
 change your appearance at will
 change your appearance
+change appearance
 
 centaurs
 merpeople

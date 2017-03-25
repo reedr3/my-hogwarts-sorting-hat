@@ -30,30 +30,52 @@ module.exports = {
 
     if (answer == "not Gryffindor") {
       context.attributes.Gryffindor -= 3;
+      context.attributes.nonsenseAnswer = false;
     }
     else if (answer == "not Ravenclaw") {
       context.attributes.Ravenclaw -= 3;
+      context.attributes.nonsenseAnswer = false;
     }
     else if (answer == "not Hufflepuff") {
       context.attributes.Hufflepuff -= 3;
+      context.attributes.nonsenseAnswer = false;
     }
     else if (answer == "not Slytherin") {
       context.attributes.Slytherin -= 3;
+      context.attributes.nonsenseAnswer = false;
+    }
+    else if (answer == "any" || answer == "any is fine") {
+      context.attributes.nonsenseAnswer = false;
     }
     else {
-      for (i = 0; i < 38; i++) {
+      var notInGryffindor = true;
+      var notInRavenclaw = true;
+      var notInHufflepuff = true;
+      var notInSlytherin = true;
+
+      for (i = 0; i < 41; i++) {
         if (houseAnswers["Gryffindor"][i] == answer) {
           context.attributes.Gryffindor += 1;
+          notInGryffindor = false;
         }
         if (houseAnswers["Ravenclaw"][i] == answer) {
           context.attributes.Ravenclaw += 1;
+          notInRavenclaw = false;
         }
         if (houseAnswers["Hufflepuff"][i] == answer) {
           context.attributes.Hufflepuff += 1;
+          notInHufflepuff = false;
         }
         if (houseAnswers["Slytherin"][i] == answer) {
           context.attributes.Slytherin += 1;
+          notInSlytherin = false;
         }
+      }
+      if (notInGryffindor && notInRavenclaw && notInHufflepuff && notInSlytherin) {
+        context.attributes.nonsenseAnswer = true;
+      }
+      else {
+        context.attributes.nonsenseAnswer = false;
       }
     }
   },

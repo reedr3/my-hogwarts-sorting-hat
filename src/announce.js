@@ -34,6 +34,6 @@ module.exports = {
       this.emit(':ask', messages["helpMessage"], messages["helpMessage"]);
   },
   'Unhandled': function () {
-      this.emit(':ask', messages["postAnnounceMessage"], messages["postAnnounceMessage"]);
+      this.emit(':ask', messages["unhandleMessage"] + messages["postAnnounceMessage"], messages["postAnnounceMessage"]);
   }
 };
