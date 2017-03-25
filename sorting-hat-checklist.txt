@@ -3,12 +3,12 @@
 ~~ remove third and fourth questions for sorting hat
 ~~ just have why it takes longer and if it was right house
 ~~ maybe get rid of some of the extraneous speech? like 'put me on so i can sort you' kind of stuff
-make sure errors and her not hearing an answer is handled correctly
+~~ make sure errors and her not hearing an answer is handled correctly
 
-make sure works in us and uk versions
-draw logo
-write up decription and legal stuff saying it's fan made and not endorsed by harry potter or rowling
-all questions and songs property of jk rowling and pottermore
+~~ make sure works in us and uk versions
+~~ draw logo
+~~ write up decription and legal stuff saying it's fan made and not endorsed by harry potter or rowling
+~~ all questions and songs property of jk rowling and pottermore
 
 add readme to github repo
 add to resume and linkedin
