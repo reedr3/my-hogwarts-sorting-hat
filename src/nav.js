@@ -40,11 +40,6 @@ module.exports = {
       this.emit(':ask', messages["preSortingMessage"] + firstQuestion, firstQuestion);
     },
 
-    'AskQuestionIntent': function () {
-        this.handler.state = states.QUESTIONSMODE;
-        this.emit(':ask', messages["chooseQuestionMessage"], messages["chooseQuestionMessage"]);
-    },
-
 
 
     'AMAZON.StopIntent': function () {
@@ -54,10 +49,11 @@ module.exports = {
         this.emit(':tell', messages["goodbyeMessage"]);
     },
     'AMAZON.StartOverIntent': function () {
-         this.emit(':ask', messages["startOverMessage"], messages["startOverMessage"]);
+        this.handler.state = states.STARTMODE;
+        this.emit(':ask', messages["startOverMessage"] + messages["welcomeMessage"], messages["repeatWelcomeMessage"]);
     },
     'AMAZON.HelpIntent': function () {
-        this.emit(':ask', messages["helpMessage"], messages["helpMessage"]);
+        this.emit(':ask', messages["helpMessage"], messages["shortNavMessage"]);
     },
     'Unhandled': function () {
         this.emit(':ask', messages["unhandleMessage"] + messages["shortNavMessage"], messages["shortNavMessage"]);
