@@ -4,10 +4,9 @@
 
 * Hear the sorting hat song!
 * Then answer questions so that the hat can sort you into your house!
-* You can even ask the hat a question or two!
 
 
-### Link to skill on the Amazon Alexa Skills Store: (publication pending)
+### Amazon Alexa Skills Store: (publication pending)
 
 
 #### This skill is made by a devoted fan. This skill is not endorsed by Harry Potter or J.K. Rowling.
