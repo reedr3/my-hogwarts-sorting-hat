@@ -28,19 +28,19 @@ module.exports = {
 
   addHousePoint: function (context, answer) {
 
-    if (answer == "not Gryffindor") {
+    if (answer == "not griffin door") {
       context.attributes.Gryffindor -= 3;
       context.attributes.nonsenseAnswer = false;
     }
-    else if (answer == "not Ravenclaw") {
+    else if (answer == "not raven claw") {
       context.attributes.Ravenclaw -= 3;
       context.attributes.nonsenseAnswer = false;
     }
-    else if (answer == "not Hufflepuff") {
+    else if (answer == "not huffle puff") {
       context.attributes.Hufflepuff -= 3;
       context.attributes.nonsenseAnswer = false;
     }
-    else if (answer == "not Slytherin") {
+    else if (answer == "not slither in") {
       context.attributes.Slytherin -= 3;
       context.attributes.nonsenseAnswer = false;
     }

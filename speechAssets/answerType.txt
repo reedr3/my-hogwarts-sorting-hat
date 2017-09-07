@@ -162,9 +162,9 @@ left
 
 
 
-not Gryffindor
-not Ravenclaw
-not Hufflepuff
-not Slytherin
+not griffin door
+not raven claw
+not huffle puff
+not slither in
 any is fine
 any
