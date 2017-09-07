@@ -53,7 +53,7 @@ module.exports = {
       var notInHufflepuff = true;
       var notInSlytherin = true;
 
-      for (i = 0; i < 41; i++) {
+      for (i = 0; i < 42; i++) {
         if (houseAnswers["Gryffindor"][i] == answer) {
           context.attributes.Gryffindor += 1;
           notInGryffindor = false;
