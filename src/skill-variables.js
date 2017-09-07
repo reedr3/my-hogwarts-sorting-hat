@@ -14,7 +14,7 @@ module.exports = {
     [
       "What kind of instument most pleases your ear? Violin, trumpet, piano, or drum. ",
       "Once every century, the Flutterby bush produces flowers that adapt their scent to attract the unwary. If it lured you, it would smell of: a crackling log fire, the sea, fresh parchment, or home. ",
-      "Which road tempts you most? The wide sunny grassy lane, the narrow dark latern-lit alley, the twisting leaf-strewn path through woods, or the cobbled street lined with ancient buildings. "
+      "Which road tempts you most? The grassy lane, the latern lit alley, the twisting path, or the cobbled street. "
     ],
     [
       "Which would you rather be? Envied, imitated, trusted, praised, liked, or feared. ",
@@ -22,8 +22,8 @@ module.exports = {
       "Which would you rather be? Envied, imitated, trusted, praised, liked, or feared. "
     ],
     [
-      "What are you most looking forward to learning at Hogwarts? Apparition, transfiguration, broomstick flying, hexes and jinxes, all about magical creatures, secrets about the castle, every area of magic I can. ",
-      "If you could have any power, which would you choose? Read minds, invisibility, superhuman strength, speak to animals, change the past, change your appearance at will. ",
+      "What are you most looking forward to learning at Hogwarts? Apparition, transfiguration, broomstick flying, hexes and jinxes, magical creatures, castle secrets, or everything! ",
+      "If you could have any power, which would you choose? Read minds, invisibility, superhuman strength, speak to animals, change the past, change appearance at will. ",
       "Which of the following would you most like to study? Centaurs, goblins, merpeople, ghosts, vampires, werewolves, trolls. "
     ],
     [
@@ -47,38 +47,38 @@ module.exports = {
 
     "Gryffindor": [
       "cowardly", "glory", "the bold", "bold", "the trumpet", "trumpet", "a crackling log fire",
-      "crackling log fire", "log fire", "imitated", "envied", "being ignored", "hunger", "secrets about the castle",
-      "secrets", "castle secrets", "broomstick flying", "flying", "invisibility", "superhuman strength", "werewolves",
-      "trolls", "the twisting leaf-strewn path through woods", "the path through the woods", "path through the woods", "woods", "path through woods", "the twisting path through the woods",
-      "twisting path through the woods", "the twisting path through woods", "twisting path through woods", "twisting path through the woods", "dawn", "stars", "forest",
-      "black", "heads", "right", "fire", "ignored", "strength"
+      "a crackling fire", "a log fire", "crackling log fire", "crackling fire", "log fire", "fire", "a fire",
+      "imitated", "envied", "being ignored", "ignored", "hunger", "secrets about the castle", "secrets about castle",
+      "secrets", "castle secrets", "broomstick flying", "flying", "broomstick", "broomsticks", "invisibility",
+      "superhuman strength", "strength", "werewolves", "trolls", "the twisting path", "twisting path", "the path",
+      "path", "dawn", "stars", "forest", "black", "heads", "right"
     ],
 
     "Ravenclaw": [
       "ignorant", "wisdom", "the wise", "wise", "the violin", "violin", "fresh parchment",
-      "parchment", "trusted", "praised", "boredom", "cold", "every area of magic I can", "every area of magic",
-      "every area", "transfiguration", "read minds", "change the past", "centaurs", "merpeople", "the cobbled street",
-      "the cobbled street line with ancient buildings", "the cobbled street with buildings", "dusk", "moon", "river", "white", "heads",
-      "left", "filler", "filler", "filler", "filler", "filler", "filler",
-      "filler", "filler", "filler", "the cobbled street lined with buildings", "the cobbled street with ancient buildings", "change past"
+      "parchment", "trusted", "praised", "boredom", "cold", "everything", "every",
+      "all of it", "transfiguration", "read minds", "mind read", "mind reading", "reading minds", "change the past",
+      "change past", "centaurs", "merpeople", "the cobbled street", "cobbled street", "the street", "street",
+      "dusk", "moon", "river", "white", "heads", "left", "filler",
+      "filler", "filler", "filler", "filler", "filler", "filler", "filler"
     ],
 
     "Hufflepuff": [
       "selfish", "love", "the good", "good", "the drum", "drum", "home",
       "trusted", "liked", "hunger", "loneliness", "apparition", "all about magical creatures", "magical creatures",
-      "speak to animals", "change your appearance at will", "change your appearance", "ghosts", "centaurs", "the wide sunny grassy lane", "sunny grassy lane",
-      "grassy lane", "dawn", "stars", "river", "white", "tails", "right",
-      "filler", "filler", "filler", "filler", "filler", "filler", "filler",
-      "the wide grassy lane", "the wide lane", "the sunny grassy lane", "the grassy lane", "change appearance", "creatures"
+      "creatures", "speak to animals", "talk to animals", "animals", "change your appearance at will", "change appearance at will", "change your appearance",
+      "change appearance", "appearance", "ghosts", "centaurs", "the grassy lane", "grassy lane", "the lane",
+      "lane", "dawn", "stars", "river", "white", "tails", "right",
+      "filler", "filler", "filler", "filler", "filler", "filler", "filler"
     ],
 
     "Slytherin": [
       "ordinary", "power", "the great", "great", "the piano", "piano", "the sea",
-      "sea", "envied", "feared", "cold", "being ignored", "hexes and jinxes", "hexes",
-      "jinxes", "broomstick flying", "flying", "read minds", "invisibility", "goblins", "vampires",
-      "the narrow dark latern-lit alley", "the narrow alley", "narrow dark alley", "alley", "dusk", "moon", "forest",
-      "black", "tails", "left", "filler", "filler", "filler", "filler",
-      "filler", "the latern-lit alley", "the narrow latern-lit alley", "the dark alley", "the alley", "ignored"
+      "sea", "envied", "feared", "cold", "being ignored", "ignored", "hexes and jinxes",
+      "hexes", "jinxes", "broomstick flying", "flying", "broomstick", "broomsticks", "read minds",
+      "reading minds", "mind read", "mind reading", "invisibility", "goblins", "vampires", "the latern lit alley",
+      "lantern lit alley", "the alley", "alley", "the lantern alley", "lantern alley", "the lit alley", "lit alley",
+      "dusk", "moon", "forest", "black", "tails", "left", "filler"
     ]
   },
 
@@ -110,7 +110,7 @@ module.exports = {
   },
 
   "messages": {
-      "welcomeMessage": "Welcome to hogworts! Before you begin your studies you must be sorted into your houses. While here, your house will be like your family. Lets begin! Do you want to hear the sorting song or do you want to skip to the sorting ceremony? Say begin song or say begin sorting. ",
+      "welcomeMessage": "Welcome to hogworts! Before we get started, here are a few helpful commands. At any point, you can start over by saying start over or by saying I solemnly swear I am up to no good. You can exit at any point by saying exit or by saying mischief managed. Alright, wonderful! Before you begin your studies you must be sorted into your houses. While at hogworts, your house will be like your family. Lets begin! Do you want to hear the sorting song or do you want to skip to the sorting ceremony? Say begin song or say begin sorting. ",
       "repeatWelcomeMessage": "Say begin song or say begin sorting. ",
       "afterSongMessage": "Would you like to begin the sorting now? Say begin sorting. ",
       "preSortingMessage": "Lets begin! ",

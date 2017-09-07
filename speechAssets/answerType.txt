@@ -31,7 +31,11 @@ the piano
 piano
 
 a crackling log fire
+a crackling fire
+a log fire
+a fire
 crackling log fire
+crackling fire
 log fire
 fire
 fresh parchment
@@ -40,38 +44,26 @@ home
 the sea
 sea
 
-the twisting leaf-strewn path through woods
-the path through the woods
-path through the woods
-woods
-path through woods
-the twisting path through the woods
-twisting path through the woods
-the twisting path through woods
+the twisting path
+twisting path
+the path
+path
 the cobbled street
-the cobbled street lined with ancient buildings
-the cobbled street lined with buildings
-the cobbled street with ancient buildings
-the cobbled street with buildings
-the wide sunny grassy lane
-the wide grassy lane
-the wide lane
-the sunny grassy lane
-sunny grassy lane
+cobbled street
+the street
+street
 the grassy lane
 grassy lane
-the narrow dark latern-lit alley
-the narrow latern-lit alley
-the latern-lit alley
-the narrow alley
-the narrow dark alley
-narrow alley
-narrow dark alley
-the dark alley
-dark alley
+the lane
+lane
+the latern lit alley
+latern lit alley
 the alley
 alley
-
+the lantern alley
+lantern alley
+the lit alley
+lit alley
 
 
 
@@ -95,13 +87,16 @@ loneliness
 
 
 secrets about the castle
+secrets about castle
 secrets
 castle secrets
 broomstick flying
 flying
-every area of magic I can
-every area of magic
-every area
+broomstick
+broomsticks
+everything
+every
+all of it
 transfiguration
 apparition
 all about magical creatures
@@ -115,12 +110,19 @@ invisibility
 superhuman strength
 strength
 read minds
+reading minds
+mind read
+mind reading
 change the past
 change past
 speak to animals
+talk to animals
+animals
 change your appearance at will
 change your appearance
+change appearance at will
 change appearance
+appearance
 
 centaurs
 merpeople
@@ -160,9 +162,9 @@ left
 
 
 
-not Gryffindor
-not Ravenclaw
-not Hufflepuff
-not Slytherin
+not griffin door
+not raven claw
+not huffle puff
+not slither in
 any is fine
 any
