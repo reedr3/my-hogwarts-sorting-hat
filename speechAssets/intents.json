@@ -16,18 +16,6 @@
       "intent": "PoemIntent"
     },
     {
-      "intent": "AskQuestionIntent"
-    },
-    {
-      "intent": "ChooseQuestionIntent",
-      "slots": [
-        {
-          "name": "Question",
-          "type": "AMAZON.NUMBER"
-        }
-      ]
-    },
-    {
       "intent": "AnswerIntent",
       "slots": [
         {

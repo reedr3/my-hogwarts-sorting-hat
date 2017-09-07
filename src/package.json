@@ -1,12 +1,12 @@
 {
-  "name": "DecisionTree",
+  "name": "My Hogwarts Sorting Hat",
   "version": "1.0.0",
-  "description": "Alexa Decision Tree template",
+  "description": "Get sorted into your Hogwarts House!",
   "main": "index.js",
   "dependencies": {
     "alexa-sdk": "^1.0.0"
   },
   "devDependencies": {},
-  "author": "Amazon.com",
+  "author": "Ryker Reed",
   "license": "SEE LICENSE IN license.md"
 }

@@ -3,7 +3,6 @@ var skillVariables = require("./skill-variables");
 var states = skillVariables["states"];
 var houses = skillVariables["houses"];
 var poems = skillVariables["poems"];
-var questions = skillVariables["questions"];
 var messages = skillVariables["messages"];
 var sortingSongs = skillVariables["sortingSongs"];
 var houseAnswers = skillVariables["houseAnswers"];
@@ -19,11 +18,6 @@ module.exports = {
   getPoemSpeech: function (context) {
       var houseId = context.attributes.houseChoice;
       return poems[houseId];
-  },
-
-  // gets the poem output for the chosen house
-  getQuestionSpeech: function (questionId) {
-      return questions[questionId];
   },
 
   addHousePoint: function (context, answer) {

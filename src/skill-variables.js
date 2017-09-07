@@ -96,21 +96,15 @@ module.exports = {
      "You've been sorted into Slytherin, Where you'll make your true friends. Those cunning folk use any means, To achieve their ends. "
   ],
 
-  "questions": [
-     "Ah yes, you were particularly difficult to sort, but I stand by what I said. ",
-     "For some it is clear where they belong. Others are harder and I need more time to decide. "
-  ],
-
   "states": {
       STARTMODE: '_STARTMODE',        // prompt user to start with either song or sorting
       SORTINGMODE: '_SORTINGMODE',    // actual sorting questions
       ANNOUNCEMODE: '_ANNOUNCEMODE',  // announce house user was sorted into and offer poem about house
-      NAVMODE: '_NAVMODE',            // intermediate/central menu where you can go back to song, sort another user, or ask hat questions
-      QUESTIONSMODE: '_QUESTIONSMODE' // offers possible questions the user can ask the hat, then provides answers
+      NAVMODE: '_NAVMODE'            // intermediate/central menu where you can go back to song, sort another user, or ask hat questions
   },
 
   "messages": {
-      "welcomeMessage": "Welcome to hogworts! Before we get started, here are a few helpful commands. At any point, you can start over by saying start over or by saying I solemnly swear I am up to no good. You can exit at any point by saying exit or by saying mischief managed. Alright, wonderful! Before you begin your studies you must be sorted into your houses. While at hogworts, your house will be like your family. Lets begin! Do you want to hear the sorting song or do you want to skip to the sorting ceremony? Say begin song or say begin sorting. ",
+      "welcomeMessage": "Welcome to hogworts! Before you begin your studies you must be sorted into your houses. While at hogworts, your house will be like your family. Lets begin! Do you want to hear the sorting song or do you want to skip to the sorting ceremony? Say begin song or say begin sorting. ",
       "repeatWelcomeMessage": "Say begin song or say begin sorting. ",
       "afterSongMessage": "Would you like to begin the sorting now? Say begin sorting. ",
       "preSortingMessage": "Lets begin! ",
@@ -118,14 +112,12 @@ module.exports = {
       "postSortingMessage": "Better be ",
       "postAnnounceMessage": "Would you like to hear more about your house or continue? Say hear more or say continue. ",
       "continueMessage": "Please say continue. ",
-      "navMessage": "Would you like to hear the sorting song again? Or would you like to sort another student? Or would you like to ask me some questions? Say begin song, or say sort another student, or say I have a question, or say mischief managed to finish. ",
-      "chooseQuestionMessage": "Bee in your bonnet? Which of the following questions would you like to ask? One, did you put me in the right house? Two, why do you take longer to sort some people? Say one or two to ask your question. ",
-      "anotherQuestionMessage": "Do you have another question? ",
-      "goodbyeMessage": "Goodbye! ",
-      "helpMessage": "I am the sorting hat! I can sing my song for you, or I can ask you questions and sort you into your house, or you can ask me questions after I sort you. ",
-      "startOverMessage": "Would you like to start the program over? Say start over. ",
+      "navMessage": "Would you like to hear the sorting song again? Or would you like to sort another student? Say begin song, or say sort another student, or say mischief managed to finish. ",
+      "goodbyeMessage": "Farewell! ",
+      "helpMessage": "Help will always be given at hogworts to those who ask for it. What would you like help with? I can sing my song for you or sort you into your house. If you want to exit, simply say exit or say mischief managed. If you want to start over simply say start over or say I solemnly swear that I am up to no good. ",
+      "startOverMessage": "Starting over now. ",
       "unhandleMessage": "Sorry, I didn't catch that. ",
-      "shortNavMessage": "Say begin song, or say sort another student, or say I have a question, or say mischief managed to finish. "
+      "shortNavMessage": "Say begin song, or say sort another student, or say mischief managed to finish. "
   },
 
   "sortingSongs": [
