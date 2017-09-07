@@ -110,7 +110,7 @@ module.exports = {
   },
 
   "messages": {
-      "welcomeMessage": "Welcome to hogworts! Before you begin your studies you must be sorted into your houses. While here, your house will be like your family. Lets begin! Do you want to hear the sorting song or do you want to skip to the sorting ceremony? Say begin song or say begin sorting. ",
+      "welcomeMessage": "Welcome to hogworts! Before we get started, here are a few helpful commands. At any point, you can start over by saying start over or by saying I solemnly swear I am up to no good. You can exit at any point by saying exit or by saying mischief managed. Alright, wonderful! Before you begin your studies you must be sorted into your houses. While at hogworts, your house will be like your family. Lets begin! Do you want to hear the sorting song or do you want to skip to the sorting ceremony? Say begin song or say begin sorting. ",
       "repeatWelcomeMessage": "Say begin song or say begin sorting. ",
       "afterSongMessage": "Would you like to begin the sorting now? Say begin sorting. ",
       "preSortingMessage": "Lets begin! ",
